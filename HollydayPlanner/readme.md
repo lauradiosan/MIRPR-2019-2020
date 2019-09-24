@@ -20,7 +20,7 @@ Fiecare sugestie oferita de catre asistentul automat trebuie sa ia in calcul inf
 -	Informatii vizuale (atat criteriile solicitate de client, cat si si descrierile elementelor printre care se face cautarea)
 -	Informatii dintr-o retea sociala (o retea de prieteni sau o retea de impresii/reviews despre anumite elemente turistice)
 
-De exemplu, un client vrea sa mearga impreuna cu familia lui la mare in Creta, vrea sa fie cazat intr-un camping (pt ca merge cu rulota) a carui plaja sa fie cam asa   (plaja cu nisip alb), pe drum sa se opreasca in 2 locatii cu obiective istorice si vrea sa calatoreasca intr-o caravana cu alte 2 familii (una dintre familii doreste ca locatia de cazare sa aiba atat acces direct la mare, cat si acess la un aqua-parc).
+De exemplu, un client vrea sa mearga impreuna cu familia lui la mare in Creta, vrea sa fie cazat intr-un camping (pt ca merge cu rulota) a carui plaja sa fie cam asa <img src="whiteBeach.png" alt="white beach"/>  (plaja cu nisip alb), pe drum sa se opreasca in 2 locatii cu obiective istorice si vrea sa calatoreasca intr-o caravana cu alte 2 familii (una dintre familii doreste ca locatia de cazare sa aiba atat acces direct la mare, cat si acess la un aqua-parc).
 
 ## Date si referinte
 **Voice and text processing**
