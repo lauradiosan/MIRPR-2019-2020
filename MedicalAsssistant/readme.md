@@ -1,5 +1,5 @@
 
-Asistent Automat pentru un student la medicina
+Asistent Automat pentru un student la medicina MedicalAsssistant/heart.jpg
 
 
 	
