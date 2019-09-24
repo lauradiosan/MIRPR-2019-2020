@@ -1,13 +1,11 @@
 
-Asistent Automat pentru un student la medicina  <img src="heartSmall.png" alt="A cool heart"/>
+# Asistent Automat pentru un student la medicina  <img src="heartSmall.png" alt="A cool heart"/>
 
-
-	
-	Obiective
+## Obiective
 Dezvoltarea unei aplicatii didactice care sa ajute studentii la medicina sa invete.
 
 
-	Ideea de baza
+## Ideea de baza
 	In procesul de invatare desfasurat de un student la medicina ar fi utila o aplicatie (mobila) care sa ii prezinte vizual informatii relevante despre organele si bolile investigate. Astfel se doreste o aplicatie care, plecand de la informatii preluate in format RMN sau CT, sa permita vizualizarea 3D a unui organ (in intregime sau partial, din diferite unghiuri, reliefand anumite detalii – de ex vizualizarea inimii cu camerele ei sau doar a unei camere, sistemul vascular din inima, etc.), precum si a unor defecte posibile (identificarea automata a acestor defecte si vizualizarea lor – de ex. Fibroza atriala). 
 
 
