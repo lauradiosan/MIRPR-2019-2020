@@ -24,7 +24,7 @@ Succesul sau esecul unei aplicatii interactive este determinata de utilizabilita
 - Din perspectiva clientului (utilizarii aplicatiei de catre prescolar in colaborare cu educatoarea/psihologul)
 
 ## Date si referinte
-** Imagini **
+**Imagini**
 1. Emotii faciale 
 - Cohn-Kanade http://www.consortium.ri.cmu.edu/ckagree/
 - FER https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/overview
@@ -33,7 +33,7 @@ Succesul sau esecul unei aplicatii interactive este determinata de utilizabilita
 3. Emotii in vorbire
 - https://zenodo.org/record/1188976#.XYnKuigzY2x
 
-** Metode de lucru **
+**Metode de lucru**
 1. Tarnowski, Paweł, et al. ”Emotion recognition using facial expressions.” Procedia Computer Science 108 (2017): 1175-1184.
 Matsuda, Yuki, et al. "Emotour: Estimating emotion and satisfaction of users based on behavioral cues and audiovisual data." Sensors 18.11 (2018): 3978.
 2. Singh, Shilpi, and S. V. A. V. Prasad. "Techniques and Challenges of Face Recognition: A Critical Review." Procedia computer science 143 (2018): 536-543.
