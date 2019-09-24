@@ -21,7 +21,7 @@ In procesul de invatare desfasurat de un student la medicina ar fi utila o aplic
 - Din perspectiva clientului (utilizarii aplicatiei de catre student/medic)
 
 ## Date si referinte
-**Images**
+**Imagini**
 1. http://segchd.csail.mit.edu/data.html
 2. https://grand-challenge.org/challenges/
 
