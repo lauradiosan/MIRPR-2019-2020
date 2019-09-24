@@ -12,14 +12,13 @@ Unora dintre conducatorii auto le-ar prinde bine putin ajutor in trafic in activ
 - semnelor de circulatie si a marcajelor in trafic
 - conditiilor meteo si rutiere curente 
 2. Identificarea unui traseu optim (intre 2 locatii) 
-3. In cazul recunoasterii unor anumite elemente, se vor antrena si valida modele de clasificare folosind informatii preluate din seturi de date de tip benchmark, iar clasificatorii rezultati vor fi testati folosind informatii noi preluate de diferiti senzori atasati autovehicului. 
-4. In cazul identificarii unui anumit traseu, se vor folosi informatii din harti (sub forma unor grafe) si algoritmi de optimizare corespunzatori.
-5. Imbunatatire componente inteligente
+3. Nota:
+- In cazul recunoasterii unor anumite elemente, se vor antrena si valida modele de clasificare folosind informatii preluate din seturi de date de tip benchmark, iar clasificatorii rezultati vor fi testati folosind informatii noi preluate de diferiti senzori atasati autovehicului. 
+- In cazul identificarii unui anumit traseu, se vor folosi informatii din harti (sub forma unor grafe) si algoritmi de optimizare corespunzatori.
+4. Imbunatatire componente inteligente
 -	Din perspectiva calitatii procesului de invatare automata
 -	Din perspectiva complexitatii temporale si spatiale aferenta clasificatorului
--	Din perspectiva clientului
-o	Considerarea si anticiparea comportamentului celorlalti participanti la trafic (pietoni, autovehicule)
-o	Scalarea sistemului automat in cazul unui grup de autovehicule (de ex reteaua de taxi-uri a unui oras)
+-	Din perspectiva clientului prin considerarea si anticiparea comportamentului celorlalti participanti la trafic (pietoni, autovehicule) si prin scalarea sistemului automat in cazul unui grup de autovehicule (de ex reteaua de taxi-uri a unui oras)
 
 ## Date si referinte
 **Pedestrians**
