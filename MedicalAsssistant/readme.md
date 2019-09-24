@@ -20,10 +20,10 @@ In procesul de invatare desfasurat de un student la medicina ar fi utila o aplic
 - Din perspectiva complexitatii temporale si spatiale aferenta clasificatorului
 - Din perspectiva clientului (utilizarii aplicatiei de catre student/medic)
 
-## Data and references
+## Date si referinte
 **Images**
-http://segchd.csail.mit.edu/data.html
-https://grand-challenge.org/challenges/
+1. http://segchd.csail.mit.edu/data.html
+2. https://grand-challenge.org/challenges/
 
 **Existing methods**
 1. Vezhnevets, Vladimir, and Vadim Konouchine. "GrowCut: Interactive multi-label ND image segmentation by cellular automata." proc. of Graphicon. Vol. 1. No. 4. 2005.
