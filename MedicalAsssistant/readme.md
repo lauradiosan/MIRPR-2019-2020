@@ -1,6 +1,8 @@
 
 Asistent Automat pentru un student la medicina  <img src="MedicalAsssistant/heart.jpg" alt="My cool heart"/>
 
+Asistent Automat pentru un student la medicina  <img src="heart.jpg" alt="My cool heart"/>
+
 
 	
 	Obiective
