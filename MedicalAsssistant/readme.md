@@ -1,5 +1,5 @@
 
-Asistent Automat pentru un student la medicina MedicalAsssistant/heart.jpg
+Asistent Automat pentru un student la medicina  <img src="MedicalAsssistant/heart.jpg" alt="My cool heart"/>
 
 
 	
