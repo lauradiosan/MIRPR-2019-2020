@@ -25,7 +25,7 @@ In procesul de invatare desfasurat de un student la medicina ar fi utila o aplic
 1. http://segchd.csail.mit.edu/data.html
 2. https://grand-challenge.org/challenges/
 
-**Existing methods**
+**Metode de lucru**
 1. Vezhnevets, Vladimir, and Vadim Konouchine. "GrowCut: Interactive multi-label ND image segmentation by cellular automata." proc. of Graphicon. Vol. 1. No. 4. 2005.
 2. Kauffmann, Claude, and Nicolas Piché. "Seeded ND medical image segmentation by cellular automaton on GPU." International journal of computer assisted radiology and surgery 5.3 (2010): 251-262.
 3. Peng Peng, Karim Lekadir,  Ali Gooya, Ling Shao, Steffen E. Petersen, Alejandro F. Frangi, A review of heart chamber segmentation for  structural and functional analysis using cardiac magnetic resonance imaging, Magn Reson Mater Phy (2016) 29:155–195
