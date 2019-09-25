@@ -19,7 +19,7 @@ Proiectul implică:
 Citiţi lista de date disponibile şi proiecte potenţiale. Se recomandă folosirea acestor date, însă este posibilă folosirea şi altor surse (care trebuie să fie disponibile la momentul livrării propunerii de proiect). 
 
 **Raportul**
-Trebuie redactat in latex conform modelului de [aici](report/texModel/model.tex) si trebuie sa fie structurat conform recomandarilor de [aici](report/description). 
+Trebuie redactat in latex conform modelului de [aici](report/texModel/model.tex) si trebuie sa fie structurat conform recomandarilor de [aici](report/description.md). 
 
 
 **Prezentarea finala**
