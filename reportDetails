@@ -1,0 +1,15 @@
+-	Introducere
+o	Ideea de baza a proiectului
+o	Motivatie (accent pe necesitatea folosirii unui algoritm inteligent) 
+-	Problema stiintifica abordata
+o	Descrierea (plastica si formala) a problemei stiintifice care trebuie rezolvata
+-	Metode existente de rezolvare a problemei (related work)
+o	Sfat: pentru fiecare lucrare referita mentionati urmatoarele aspecte: datele pe care s-a lucrat, algoritmul cu care s-a lucrat, rezultatele obtinute
+-	Metode efectiv folosite pentru rezolvarea problemei
+o	Descrierea algoritmilor inteligenti folositi, a procesului de invatare/optimizare implicat, a metricilor folosite pentru aprecierea calitatii rezolvarii problemei
+-	Rezultate experimentale obtinute
+o	Descrierea seturilor de date folosite (sursa datelor, clasificarea/tipologia datelor)
+o	Metodologia experimentala (care sunt întrebările la care ar trebui să răspundă exeperimentele efectuate)  si parametrii algoritmilor
+o	Rezultatele obtinute (măsurile de performanţă calculate ca urmare a aplicării clor 2 algoritmi inteligenti pentru rezolvarea problemei
+o	Analiza statistica a rezultatelor obtinute
+-	Concluzii si posibile imbunatatiri
