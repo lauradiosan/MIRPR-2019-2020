@@ -19,12 +19,12 @@ Proiectul implică:
 Citiţi lista de date disponibile şi proiecte potenţiale. Se recomandă folosirea acestor date, însă este posibilă folosirea şi altor surse (care trebuie să fie disponibile la momentul livrării propunerii de proiect). 
 
 **Raportul**
-Trebuie redactat in latex conform modelului de [aici](report/texModel/model.tex) si trebuie sa fie structurat conform recomandarilor de [aici](report/description.md). 
+Trebuie redactat in latex conform modelului de [aici](Report/texModel/model.tex) si trebuie sa fie structurat conform recomandarilor de [aici](Report/readme.md). 
 
 
 **Prezentarea finala**
 Trebuie realizata o prezentare (PowerPoint sau alt tip) a muncii realizate de-a lungul semstrului. Structura prezentarii urmează îndeaproape structura raportului, cu un accent deosebit pus pe rezultatele obţinute. Prezentarea trebuie sa conţină aproximativ 10 slide-uri şi să dureze maxim 10 minute. Expunerea trebuie să includă şi prezentarea aplicaţiei realizate şi folosite pentru efectuarea experimentelor.
 
 **Criterii de evaluare**
-Detalii despre continutul evaluarii si termenele de predare intermediare se gasesc [aici](eval/description.md)
+Detalii despre continutul evaluarii si termenele de predare intermediare se gasesc [aici](Eval/readme.md)
 
