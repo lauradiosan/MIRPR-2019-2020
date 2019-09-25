@@ -25,4 +25,6 @@ Trebuie redactat in latex conform modelului de [aici](report/texModel/model.tex)
 **Prezentarea finala**
 Trebuie realizata o prezentare (PowerPoint sau alt tip) a muncii realizate de-a lungul semstrului. Structura prezentarii urmează îndeaproape structura raportului, cu un accent deosebit pus pe rezultatele obţinute. Prezentarea trebuie sa conţină aproximativ 10 slide-uri şi să dureze maxim 10 minute. Expunerea trebuie să includă şi prezentarea aplicaţiei realizate şi folosite pentru efectuarea experimentelor.
 
+**Criterii de evaluare**
+Detalii despre continutul evaluarii si termenele de predare intermediare se gasesc [aici](eval/description.md)
 
