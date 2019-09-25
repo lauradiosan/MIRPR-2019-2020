@@ -9,7 +9,8 @@
 | - descriere functionalitati ale aplicatiei, | | |
 | -	descriere (plastica si formala) a problemei rezolvate cu ajutorul AI | | |
 | -	related work & useful tools | | |
-| Algoritmul inteligent + small data	| 10	 | Lab3 |
+| Aplicatie – Algoritmul inteligent + small data	| 5	 | Lab3 |
+| Aplicatie – Algoritmul inteligent + real data / benchmark data | 5 | Lab4 |
 | Documentatie stiintifica – descriere metodologie experimentala si rezultate obtinute	| 10 | Lab4 |	
 | Aplicatie – integrarea algoritmului inteligent | 10	| Lab5 |
 | Documentatie stiintifica – wiki/ontology/mind-map	| 5 | Lab5 |	
