@@ -28,6 +28,7 @@ Succesul sau esecul unei aplicatii interactive este determinata de utilizabilita
 1. Emotii faciale 
 - Cohn-Kanade http://www.consortium.ri.cmu.edu/ckagree/
 - FER https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/overview
+- CAFE (for kids) https://www.childstudycenter-rutgers.com/the-child-affective-facial-expression-se
 2. Recunoasterea fetei si emotii faciale 
 - http://www.consortium.ri.cmu.edu/index.php#projects
 3. Emotii in vorbire
@@ -45,3 +46,4 @@ Matsuda, Yuki, et al. "Emotour: Estimating emotion and satisfaction of users bas
 https://www.faceplusplus.com/
 8. El Ayadi, Moataz, Mohamed S. Kamel, and Fakhri Karray. "Survey on speech emotion recognition: Features, classification schemes, and databases." Pattern Recognition 44.3 (2011): 572-587.
 9. Kerkeni, Leila, et al. "Automatic Speech Emotion Recognition Using Machine Learning." Social Media and Machine Learning. IntechOpen, 2019.
+10. LoBue, Vanessa, and Cat Thrasher. "The Child Affective Facial Expression (CAFE) set: Validity and reliability from untrained adults." Frontiers in psychology 5 (2015): 1532.
