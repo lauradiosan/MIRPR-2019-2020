@@ -27,3 +27,14 @@
 | -	Prezenta clientului	| | |
 | Stil dezvoltare (a se respecta macar aceste [recomandari](http://google.github.io/styleguide/)	| 10 | all labs |	
 | Bonus: Concursuri / articole stiintifice | 10 | Lab 6 |	
+
+
+| Punctaj total | Nota |
+| :--- | :---: | 
+| >99 | 10 |
+| [90, 99] |  9 |
+| [70, 89] | 8 |
+| [50, 69] | 7 |
+| [40, 49] | 6 |
+| [30, 39] | 5 |
+| < 30 | 4 |
