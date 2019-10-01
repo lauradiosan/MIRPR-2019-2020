@@ -25,7 +25,7 @@
 | -	Raspunsul la intrebari | | |
 | -	Adresarea de intrebari | | |
 | -	Prezenta clientului	| | |
-| Stil dezvoltare (a se respecta macar aceste [recomandari](http://google.github.io/styleguide/)	| 10 | all labs |	
+| Stil dezvoltare (a se respecta macar aceste [recomandari](http://google.github.io/styleguide/))	| 10 | all labs |	
 | Bonus: Concursuri / articole stiintifice | 10 | Lab 6 |	
 
 
