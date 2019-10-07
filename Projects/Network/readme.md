@@ -1,4 +1,4 @@
-# Analiza retelelor complexe 	<img src="net.png" alt="6degrees!"/>
+# Analiza retelelor complexe 	<img src="network.png" alt="6degrees!"/>
 
 ## Obiective
 Studiul proprietatilor si fenomenelor care apar in retelele complexe
