@@ -7,6 +7,8 @@ Proiectul pe care trebuie să-l realizaţi este o oportunitate de a explora o pr
 2. [Detectia emotiilor in comportamentul prescolarilor](Projects/EmotionKids/readme.md)
 3. [Sistem automat de asistenta auto](Projects/DrivingAssistance/readme.md)
 4. [Automatizarea planificarii vacantelor](Projects/HollydayPlanner/readme.md)
+5. [Asistent automat pentru un student la istorie-arheologie](Projects/History/readme.md)
+6. [Analiza retelelor complexe](Projects/Network/readme.md)
 
 Proiectul implică:
 -	alegerea unei teme
