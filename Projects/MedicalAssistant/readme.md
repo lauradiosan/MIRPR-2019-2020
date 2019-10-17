@@ -25,6 +25,10 @@ In procesul de invatare desfasurat de un student la medicina ar fi utila o aplic
 1. http://segchd.csail.mit.edu/data.html
 2. https://grand-challenge.org/challenges/
 
+**Evaluare**
+1. VISCERAL tool http://www.visceral.eu/resources/evaluatesegmentation-software/
+2. Descriere metrici https://bmcmedimaging.biomedcentral.com/articles/10.1186/s12880-015-0068-x
+
 **Metode de lucru**
 1. Vezhnevets, Vladimir, and Vadim Konouchine. "GrowCut: Interactive multi-label ND image segmentation by cellular automata." proc. of Graphicon. Vol. 1. No. 4. 2005.
 2. Kauffmann, Claude, and Nicolas Piché. "Seeded ND medical image segmentation by cellular automaton on GPU." International journal of computer assisted radiology and surgery 5.3 (2010): 251-262.
