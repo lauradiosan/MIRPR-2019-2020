@@ -44,6 +44,10 @@ Dilated convolutional neural networks for cardiovascular MR segmentation in cong
 9. Rahil Shahzad, Shan Gao, Qian Tao, Oleh Dzyubachyk and Rob van der Geest, Automated cardiovascular segmentation in patients with congenital heart disease from 3D CMR scans: Combining multi-atlases and level-sets, 2017 
 10. Rezaei, Mina, Haojin Yang, and Christoph Meinel. "Whole heart and great vessel segmentation with context-aware of generative adversarial networks." Bildverarbeitung für die Medizin 2018. Springer Vieweg, Berlin, Heidelberg, 2018. 353-358.
 11. Yu, Lequan, et al. "Automatic 3D cardiovascular MR segmentation with densely-connected volumetric convnets." International Conference on Medical Image Computing and Computer-Assisted Intervention. Springer, Cham, 2017.
+12. Payer, Christian, et al. "Multi-label whole heart segmentation using CNNs and anatomical label configurations." International Workshop on Statistical Atlases and Computational Models of the Heart. Springer, Cham, 2017.
+13. Yang, Guang, et al. "Multiview Sequential Learning and Dilated Residual Learning for a Fully Automatic Delineation of the Left Atrium and Pulmonary Veins from Late Gadolinium-Enhanced Cardiac MRI Images." 2018 40th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). IEEE, 2018.
+14. Zhang, Tinghong, et al. "Multiple Attention Fully Convolutional Network for Automated Ventricle Segmentation in Cardiac Magnetic Resonance Imaging." Journal of Medical Imaging and Health Informatics 9.5 (2019): 1037-1045.
+15. Zhang, Dong, et al. "Direct Quantification for Coronary Artery Stenosis Using Multiview Learning." International Conference on Medical Image Computing and Computer-Assisted Intervention. Springer, Cham, 2019.
 
 
 
