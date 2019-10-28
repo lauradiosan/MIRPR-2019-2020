@@ -29,4 +29,5 @@ Trebuie realizata o prezentare (PowerPoint sau alt tip) a muncii realizate de-a 
 
 **Criterii de evaluare**
 Detalii despre continutul evaluarii si termenele de predare intermediare se gasesc [aici](Eval/readme.md)
+Situatie punctaje [aici](https://drive.google.com/file/d/1wo6ku5j722SkAGuwnj11FqLuvTwrFWr4/view?usp=sharing)
 
