@@ -19,7 +19,7 @@ Fiecare sugestie oferita de catre asistentul automat trebuie sa ia in calcul inf
 -	Informatii textuale (atat criteriile solicitate de client, cat si si descrierile elementelor printre care se face cautarea)
 -	Informatii vizuale (atat criteriile solicitate de client, cat si si descrierile elementelor printre care se face cautarea)
 -	Informatii dintr-o retea sociala (o retea de prieteni sau o retea de impresii/reviews despre anumite elemente turistice)
-
+, https://www.microsoft.com/en-us/download/confirmation.aspx?id=52419, https://webscope.sandbox.yahoo.com/catalog.php?datatype=l, https://www.microsoft.com/en-us/download/58389, http://convai.io/data/
 De exemplu, un client vrea sa mearga impreuna cu familia lui la mare in Creta, vrea sa fie cazat intr-un camping (pt ca merge cu rulota) a carui plaja sa fie cam asa <img src="whiteBeach.png" alt="white beach"/>  (plaja cu nisip alb), pe drum sa se opreasca in 2 locatii cu obiective istorice si vrea sa calatoreasca intr-o caravana cu alte 2 familii (una dintre familii doreste ca locatia de cazare sa aiba atat acces direct la mare, cat si acess la un aqua-parc).
 
 ## Date si referinte
@@ -31,6 +31,7 @@ De exemplu, un client vrea sa mearga impreuna cu familia lui la mare in Creta, v
 5. Google Duplex https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html
 6. Parrotron https://ai.googleblog.com/2019/07/parrotron-new-research-into-improving.html
 7. Google chatbot corpus https://ai.googleblog.com/2019/01/natural-questions-new-corpus-and.html
+8. Other corpus http://www.cs.cmu.edu/~ark/QA-data/, https://www.microsoft.com/en-us/download/confirmation.aspx?id=52419, https://webscope.sandbox.yahoo.com/catalog.php?datatype=l, https://www.microsoft.com/en-us/download/58389, http://convai.io/data/
 
 **Community detection**
 1. Fast Greedy:  Clauset et al., Finding com. struct. in very large networks. Phys. Rev. E, 70:1–6, 2004
