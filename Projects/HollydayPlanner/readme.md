@@ -30,6 +30,7 @@ De exemplu, un client vrea sa mearga impreuna cu familia lui la mare in Creta, v
 4. AYLIEN https://aylien.com/text-api/?redirect=portal
 5. Google Duplex https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html
 6. Parrotron https://ai.googleblog.com/2019/07/parrotron-new-research-into-improving.html
+7. Google chatbot corpus https://ai.googleblog.com/2019/01/natural-questions-new-corpus-and.html
 
 **Community detection**
 1. Fast Greedy:  Clauset et al., Finding com. struct. in very large networks. Phys. Rev. E, 70:1–6, 2004
