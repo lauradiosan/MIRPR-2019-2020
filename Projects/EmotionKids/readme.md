@@ -29,6 +29,10 @@ Succesul sau esecul unei aplicatii interactive este determinata de utilizabilita
 - Cohn-Kanade http://www.consortium.ri.cmu.edu/ckagree/
 - FER https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/overview
 - CAFE (for kids) https://www.childstudycenter-rutgers.com/the-child-affective-facial-expression-se
+- EmoReact https://www.behnaznojavan.com/data, 
+
+
+http://databrary.org/volume/30
 2. Recunoasterea fetei si emotii faciale 
 - http://www.consortium.ri.cmu.edu/index.php#projects
 3. Emotii in vorbire
