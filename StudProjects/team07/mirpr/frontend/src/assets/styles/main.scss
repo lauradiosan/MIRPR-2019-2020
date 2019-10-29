@@ -1,0 +1,28 @@
+// For Bootstrap overrides.
+// @import './bootstrap-overrides.scss'
+
+// Bootstrap 4.1
+@import "~bootstrap/scss/bootstrap";
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.main-container {
+  padding-bottom: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.panel-body {
+  overflow-y: scroll;
+}
+
+li {
+  list-style-type: none;
+}
