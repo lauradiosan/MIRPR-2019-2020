@@ -1,0 +1,13 @@
+Docs/main.aux
+Docs/main.idx
+Docs/main.loa
+Docs/main.log
+Docs/main.lof
+Docs/main.lot
+Docs/main.out
+Dosc/main.pdf
+Docs/main.synctex.gz
+Docs/main.toc
+.vscode
+*/.idea
+*/venv
