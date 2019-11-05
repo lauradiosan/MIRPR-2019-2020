@@ -48,6 +48,7 @@ Dilated convolutional neural networks for cardiovascular MR segmentation in cong
 13. Yang, Guang, et al. "Multiview Sequential Learning and Dilated Residual Learning for a Fully Automatic Delineation of the Left Atrium and Pulmonary Veins from Late Gadolinium-Enhanced Cardiac MRI Images." 2018 40th Annual International Conference of the IEEE Engineering in Medicine and Biology Society (EMBC). IEEE, 2018.
 14. Zhang, Tinghong, et al. "Multiple Attention Fully Convolutional Network for Automated Ventricle Segmentation in Cardiac Magnetic Resonance Imaging." Journal of Medical Imaging and Health Informatics 9.5 (2019): 1037-1045.
 15. Zhang, Dong, et al. "Direct Quantification for Coronary Artery Stenosis Using Multiview Learning." International Conference on Medical Image Computing and Computer-Assisted Intervention. Springer, Cham, 2019.
+16. Zhuang, Xiahai, et al. "Evaluation of Algorithms for Multi-Modality Whole Heart Segmentation: An Open-Access Grand Challenge." arXiv preprint arXiv:1902.07880 (2019).
 
 
 
