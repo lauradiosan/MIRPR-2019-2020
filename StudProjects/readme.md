@@ -1,9 +1,9 @@
 | Team   | Crt. No. | Last name     | First name       | Group            | Project                          | Presentation (3dec/10dec/17dec/14jan)|
 |--------|----------|---------------|------------------|------------------|----------------------------------|--------------------------------------|
-| team01 | 1        | Mardaloescu   | Ana              | 235              | medical link                     | |
-| team01 | 2        | Molnar        | Radu-Stefan      | 235              |                                  | |
-| team01 | 3        | Matei         | Sergiu Razvan    | 235              |                                  | |
-| team01 | 4        | Marian        | Andrada          | 235              |                                  | |
+| team01 | 1        | Mardaloescu   | Ana              | 235              | medical link                     | 17 dec |
+| team01 | 2        | Molnar        | Radu-Stefan      | 235              |                                  | 17 dec |
+| team01 | 3        | Matei         | Sergiu Razvan    | 235              |                                  | 17 dec |
+| team01 | 4        | Marian        | Andrada          | 235              |                                  | 17 dec |
 | team02 | 5        | Turcan        | Olga             | 732              | detectie locuri parcare link     | |
 | team02 | 6        | Gurdis        | Viorel           | 731              |                                  | |
 | team02 | 7        | Zavaczki      | Raul-Robert      | 732              |                                  | |
