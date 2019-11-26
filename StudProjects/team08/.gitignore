@@ -10,4 +10,9 @@ Docs/main.synctex.gz
 Docs/main.toc
 .vscode
 */.idea
+*/checkpoints
+*/custom_initial_weights
+*/initial_weights
+*/data/*.weights
+*/results/*
 */venv

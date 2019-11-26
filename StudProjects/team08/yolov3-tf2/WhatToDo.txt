@@ -1,0 +1,39 @@
+
+Official github:
+https://github.com/zzh8829/yolov3-tf2
+
+Search for: "Convert pre-trained Darknet weights"
+-download the weights and put them in data folder
+
+Execute the script (normal/tiny) from Scripts_To_run.md for converting the weights to a valid model-checkpoint
+
+Execute the script (normal/tiny) from Scripts_To_run.md for creating our custom model by loading only the feature extractor
+from the converted pre trained weights
+
+
+At this moment we have:
+data folder contains the initial pre-trained weights archived
+initial_weights folder contains the initial pre-trained weights as a valid model structure to be read by tensorflow
+custom_initial_weights contains an initial model for our problem (with one output class) which has the pre-trained weights
+for feature extractor
+
+
+Now we theoretically can train our model by loading it as a "first-time" and train it on our images
+For now we have that initial dataset which contains 
+	-two folders train and test for data training and validation
+	-two csv files for the annotations of those images
+
+
+In Scripts_To_run.md there are two examples to train the model:
+-one based on first loading the initial model from custom_initial_weights folder
+-one which will load from the latest checkpoint (for this you need to copy last checkpoint pair of files 
+	to custom_initial_weights folder)
+
+Lastly in order to "test" you can use the script detect_custom to load the latest checkpoint (or change it if necessary)
+	and use it for detecting a specific image
+For each detection, a minimum threshold is required in order to be printed
+In the model's code folder in models.py, two threshold are defined
+yolo_iou_threshold
+yolo_score_threshold 
+I put them at a low 0.05 in order to see some basic detections since for now the algorithm isn't working that good => no high confidence
+You can play with that threshold accordingly
