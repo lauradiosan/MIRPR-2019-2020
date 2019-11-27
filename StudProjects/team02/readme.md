@@ -11,3 +11,7 @@ Living in a big city, it's a common problem to find available parking spaces for
 [Documentation](./Documentation/documentation.pdf)  
 [Wiki](./wiki.md)
 
+## Contributors
+* Olga Turcan - [cherryDevBomb](https://github.com/cherryDevBomb)
+* Viorel Gurdis - [viorelyo](https://github.com/viorelyo)
+* Raul Zavaczki - [zraul123](https://github.com/zraul123)
