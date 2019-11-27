@@ -31,7 +31,7 @@ Of course, the model has its limitations, like poor light conditions, blurred or
 As mentioned earlier, the ultimate goal of the application is to obtain information about the availability of parking spots from a video. 
 For the demo, we used a recorded sequence from a live stream video of a parking lot in Hicksville, New York, USA. Each parking spot was manually marked so the algorithm would know the location of the spots on the image. Then at each n seconds the current frame is extracted from the video and passed to the algorithm which crops each spot from the big image and uses the model to makes predictions on its occupancy. The client then gets the result and displays it on a webpage in form of a grid of red and green boxes, for occupied and free spots, respectively. The position of the boxes in the grid corresponds to those of the spots, so the user can easily identify the location of the empty parking spot.  
 
-![](/flow.jpg)
+![](./images/flow.jpg)
 
 ### Mind map
 
