@@ -1,5 +1,5 @@
 # Parkingo
-<p align="center"><img src="/images/logo.jpg" width="500"></p>  
+<p align="center"><img src="./images/logo.jpg" width="500"></p>  
 
 ## Goals
 Develop a system for real time parking lots detection.
