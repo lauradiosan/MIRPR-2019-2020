@@ -39,8 +39,8 @@
 | team12 | 37       | Galea         | Raul Ronald      |                  | img (ped, cars) detection link   | |
 | team12 | 38       | Popovici      | Andrei Sorin     | 332              |                                  | |
 | team12 | 39       | Farauanu      | Ionut Corneliu   | 933              |                                  | |
-| team13 | 40       | Pantea        | Beniamin         | 236              | kids emotion link                | |
-| team13 | 41       | Strimbu-Coman | Iulia            | prel (2016-2019) |                                  | |
-| team13 | 42       | Corcan        | Radu             | 232              |                                  | |
+| team13 | 40       | Pantea        | Beniamin         | 236              | kids emotion link                | 17 dec |
+| team13 | 41       | Strimbu-Coman | Iulia            | prel (2016-2019) |                                  | 17 dec |
+| team13 | 42       | Corcan        | Radu             | 232              |                                  | 17 dec |
 | ?      | 43       | Balas 	      | Alexandru Dan    | 931		          | ?                   				     | |
 
