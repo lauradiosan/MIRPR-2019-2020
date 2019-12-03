@@ -28,10 +28,10 @@
 | team08 | 26       | Moisi         | Teofana Ionela   | 934              |                                  | |
 | team08 | 27       | Maxim         | Tudor            | 934              |                                  | |
 | team09 | 28       | Goia          | Daniela          | 933              | RL for flight  link              | |
-| team10 | 29       | Hij           | Ancuta           | 234              | chatbot link                     | |
-| team10 | 30       | Pricope       | Tidor            | 236              |                                  | |
-| team10 | 31       | Galan         | Radu             | 233              |                                  | |
-| team10 | 32       | Szarvas       | Robert           | 231              |                                  | |
+| team10 | 29       | Hij           | Ancuta           | 234              | chatbot link                     | 14 jan|
+| team10 | 30       | Pricope       | Tidor            | 236              |                                  | 14 jan|
+| team10 | 31       | Galan         | Radu             | 233              |                                  | 14 jan|
+| team10 | 32       | Szarvas       | Robert           | 231              |                                  | 14 jan|
 | team11 | 33       | Safticu       | Daniel Marian    | 236              | copii  link                      | |
 | team11 | 34       | Sbengheci     | Vlad Andrei      | 236              |                                  | |
 | team11 | 35       | Stegaru       | Sebastian        | 937              |                                  | |
