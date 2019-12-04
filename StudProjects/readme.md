@@ -20,7 +20,7 @@
 |  ?     | 18       | Stegaru       | Sebastian        | 937              |   ?                              | |
 |  ?     | 19       | Blajan        | Darius           | 221              |    ?                             | |
 | team06 | 20       | Muresan       | Bogdan Emanuel   | 233              | chatbot link                     | |
-| team06 | 21       | Moisil        | Adriana          | 231              |                                  | |
+| team06 | 21       | Moisil        | Adriana          | 231              |                                  | 17 dec |
 | team06 | 22       | Gheorghiu     | Dragos           | 233              |                                  | |
 | team07 | 23       | Finiti        | Sebastian Marian | 933              | recommendation link              | 17 dec |
 | team07 | 24       | Dragoi        | Vlad Ioan        | 933              |                                  | 17 dec |
