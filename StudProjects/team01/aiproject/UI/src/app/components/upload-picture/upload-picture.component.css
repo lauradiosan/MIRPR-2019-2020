@@ -1,0 +1,108 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+
+.content footer {
+  color: #b39295;
+  margin-top: 40px;
+}
+
+.content footer a:hover,
+.content footer a:focus {
+  color: #4b0f31;
+}
+
+.box {
+  padding: 6.25rem 1.25rem 2.5rem;
+}
+
+.box + .box {
+  margin-top: 2.5rem;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 50vw;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.inputfile + label {
+  color: #d3394c;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label,
+.inputfile + label:hover {
+  color: #722040;
+}
+
+.inputfile + label figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d3394c;
+  display: block;
+  padding: 20px;
+  margin: 0 auto 10px;
+}
+
+.inputfile:focus + label figure,
+.inputfile.has-focus + label figure,
+.inputfile + label:hover figure {
+  background-color: #722040;
+}
+
+.inputfile + label svg {
+  width: 100%;
+  height: 100%;
+  fill: #f1e5e6;
+}
+.middle-options {
+  width: fit-content;
+  position: relative;
+  left: 45%;
+}
+
+.middle-options #submitBtn {
+  margin: 2em 0 0 -2em;
+}

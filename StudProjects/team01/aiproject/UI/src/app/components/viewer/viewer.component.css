@@ -1,0 +1,11 @@
+#viewer {
+  height: 80vh;
+  width: 100%;
+}
+
+.message{
+  position: relative;
+  top: 50vh;
+  color: red;
+  font-size: 2em;
+}
