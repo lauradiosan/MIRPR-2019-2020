@@ -4,9 +4,9 @@
 | team01 | 2        | Molnar        | Radu-Stefan      | 235              |                                  | 17 dec |
 | team01 | 3        | Matei         | Sergiu Razvan    | 235              |                                  | 17 dec |
 | team01 | 4        | Marian        | Andrada          | 235              |                                  | 17 dec |
-| team02 | 5        | Turcan        | Olga             | 732              | detectie locuri parcare link     | |
-| team02 | 6        | Gurdis        | Viorel           | 731              |                                  | |
-| team02 | 7        | Zavaczki      | Raul-Robert      | 732              |                                  | |
+| team02 | 5        | Turcan        | Olga             | 732              | detectie locuri parcare link     | 14 ian |
+| team02 | 6        | Gurdis        | Viorel           | 731              |                                  | 14 ian |
+| team02 | 7        | Zavaczki      | Raul-Robert      | 732              |                                  | 14 ian |
 | team03 | 8        | Goia          | Iulian Mihai     | 831              |                                  | |
 | team03 | 9        | Gavrilovici   | Eduard           | 831              |                                  | |
 | team03 | 10       | Condor        | Mara             | 831              |                                  | |
