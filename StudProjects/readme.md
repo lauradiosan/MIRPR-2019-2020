@@ -24,6 +24,7 @@
 | team06 | 22       | Gheorghiu     | Dragos           | 233              |                                  | |
 | team07 | 23       | Finiti        | Sebastian Marian | 933              | recommendation link              | 17 dec |
 | team07 | 24       | Dragoi        | Vlad Ioan        | 933              |                                  | 17 dec |
+| team07 | 24       | Cramba        | Bartolomeu       | 932              |                                  | 17 dec |
 | team08 | 25       | Jurj          | Flaviu Andrei    | 934              | pedestrian link                  | |
 | team08 | 26       | Moisi         | Teofana Ionela   | 934              |                                  | |
 | team08 | 27       | Maxim         | Tudor            | 934              |                                  | |
