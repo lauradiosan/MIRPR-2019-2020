@@ -25,10 +25,10 @@
 | team07 | 23       | Finiti        | Sebastian Marian | 933              | recommendation link              | 17 dec |
 | team07 | 24       | Dragoi        | Vlad Ioan        | 933              |                                  | 17 dec |
 | team07 | 24       | Cramba        | Bartolomeu       | 932              |                                  | 17 dec |
-| team08 | 25       | Jurj          | Flaviu Andrei    | 934              | pedestrian link                  | |
-| team08 | 26       | Moisi         | Teofana Ionela   | 934              |                                  | |
-| team08 | 27       | Maxim         | Tudor            | 934              |                                  | |
-| team09 | 28       | Goia          | Daniela          | 933              | RL for flight  link              | |
+| team08 | 25       | Jurj          | Flaviu Andrei    | 934              | pedestrian link                  | 14 jan |
+| team08 | 26       | Moisi         | Teofana Ionela   | 934              |                                  | 14 jan |
+| team08 | 27       | Maxim         | Tudor            | 934              |                                  | 14 jan |
+| team09 | 28       | Goia          | Daniela          | 933              | RL for flight  link              | 14 jan |
 | team10 | 29       | Hij           | Ancuta           | 234              | chatbot link                     | 14 jan|
 | team10 | 30       | Pricope       | Tidor            | 236              |                                  | 14 jan|
 | team10 | 31       | Galan         | Radu             | 233              |                                  | 14 jan|
