@@ -1,0 +1,119 @@
+body {
+  background-color: #1F2833;
+  color: #C5C6C7;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+#coverContainer {
+  height: fit-content;
+}
+
+#cover {
+	width:640px;
+	height:334px;
+	background-color: grey;
+	z-index: 1;
+	position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#player {
+	position: relative;
+	z-index: -1;
+
+}
+
+
+/* Spinner Begin https://dev.to/wangonya/displaying-a-css-spinner-on-ajax-calls-with-fetch-api-4ndo */
+#spinner:not([hidden]) {
+  position: fixed;
+  left: 0;
+  right: 0;
+  /* top: 0;
+  bottom: 0; */
+  padding-top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  animation: spin 1s infinite linear
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Spinner End */
+
+/* Parking Table Begin */
+#parking-table {
+  /* width: 200px; */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+	padding-top: 2em;
+	padding-bottom: 5em;
+	position: absolute;
+  top: 65%;
+	/* background-color: white; */
+	border-radius: 4px;
+	z-index: 1;
+	/* right: 10%; */
+	/* top: 21%; */
+	/* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+  flex-direction: column;
+
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+#parking-table table {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#parking-table tr td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.empty-spot {
+	background-color: #71D87D;
+	width: 35px;
+	height: 19px;
+	border-radius: 4px;
+}
+
+.occupied-spot {
+	background-color: #D87171;
+	width: 35px;
+	height: 19px;
+	border-radius: 4px;
+}
+/* Parking Table End */
