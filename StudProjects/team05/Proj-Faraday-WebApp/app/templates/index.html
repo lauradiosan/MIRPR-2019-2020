@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>Project Faraday</title>
+        <meta name="description" content="">
+
+        <!-- The compiled CSS file -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/production.css') }}">
+
+        <!-- Web fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700" rel="stylesheet">
+
+        <!-- favicon.ico. Place these in the root directory. -->
+        <link rel="shortcut icon" href="favicon.ico">
+
+    </head>
+
+    <body>
+
+
+    <!-- Create outer border -->
+    <div class="page-border">
+    <div class="bg--white">
+
+        <!-- Header -->
+        <header class="align--center pt3 pb2">
+            <div class="container">
+                <h1 class="mb3" title="Project Farday"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Project Farday"></h1>
+                <h2 class="mb3">The mobile driver assistant for everyone&nbsp;else.</h2>
+                <p class="mb1"></p>
+                <p>Cluj-Napoca, Romania</p>
+            </div>
+        </header>
+
+        <!-- Body -->
+        <main>
+            <div class="container">
+
+                <!-- Info -->
+                <section class="pt2 pb3" align="center">
+                    <img class="mb3" src="{{ url_for('video_feed') }}" alt="Project Faraday Prototype">
+                    <div class="grid-row">
+                        <div class="grid-column span-one-third mt1">
+                            <img class="icon mb1" src="{{ url_for('static', filename='img/bucket.svg')}}">
+                            <p>Equidem soleo etiam quod uno Graeci, si aliter non possum idem&nbsp;pluribus.</p>
+                  x      </div>
+                        <div class="grid-column span-one-third mt1">
+                            <img class="icon mb1" src="{{ url_for('static', filename='img/flask.svg') }}">
+                            <p>Nonne videmus quanta perturbatio rerum omnium consequatur&nbsp;quanta.</p>
+                        </div>
+                        <div class="grid-column span-one-third mt1">
+                            <img class="icon mb1" src="{{ url_for('static', filename='img/aircraft.svg') }}">
+                            <p>Hoc enim constituto in philosophia constituta sunt omnia aliter&nbsp;possum.</p>
+                        </div>
+                    </div>
+                     
+                </section>
+
+                <!-- Presenters -->
+                <section class="pt3 pb3 align--center">
+                    <h3 class="mb1">Our Team</h3>
+                    <div class="grid-row">
+                        <div class="grid-column span-2 mt2">
+
+                        </div>
+                        <div class="grid-column span-2 mt2">
+                            <img class="mb1" src="{{ url_for('static', filename='img/anton_mihai.jpg') }}" alt="Anton Mihai">
+                            <p class="small">Anton Mihai</p>
+                        </div>
+                        <div class="grid-column span-2 mt2">
+                            <img class="mb1" src="{{ url_for('static', filename='img/avram_cosmin.jpg') }}" alt="Avram Cosmin">
+                            <p class="small">Avram Cosmin</p>
+                        </div>
+                        <div class="grid-column span-2 mt2">
+                            <img class="mb1" src="{{ url_for('static', filename='img/geo_badita.jpg') }}" alt="Geo Badita">
+                            <p class="small">Geo Badita</p>
+                        </div>
+                        <div class="grid-column span-2 mt2">
+                            <img class="mb1" src="{{ url_for('static', filename='img/nn.png') }}" alt="ML Model">
+                            <p class="small">Our ML Model</p>
+                        </div>
+                        <div class="grid-column span-2 mt2">
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sponsors -->
+                <section class="pt3 pb3 align--center">
+                    <h3 class="mb2">Some generous peeps</h3>
+                    <img class="m1" src="{{ url_for('static', filename='img/stripe.svg')}}" alt="Stripe" style="height:50px">
+                    <img class="m1" src="{{ url_for('static', filename='img/segment.svg')}}" alt="Segment" style="height:45px">
+                    <img class="m1" src="{{ url_for('static', filename='img/newrelic.svg')}}" alt="New Relic" style="height:35px">
+                    <img class="m1" src="{{ url_for('static', filename='img/drift.svg')}}" alt="Drift" style="height:50px">
+                    <img class="m1" src="{{ url_for('static', filename='img/zopim.svg')}}" alt="Zopim" style="height:50px">
+                </section>
+
+                <!-- Testimonials -->
+                <section class="pt2 pb3">
+                    <h3 class="align--center mb2">On the record</h3>
+                    <div class="grid-row">
+                        <div class="grid-column span-one-third mt1">
+                            <blockquote class="blockquote">
+                                <p>This conference changed my life because I found my wife&nbsp;there.</p>
+                                <p>> <cite>Randy Johnson</cite></p>
+                            </blockquote>
+                        </div>
+                        <div class="grid-column span-one-third mt1">
+                            <blockquote class="blockquote">
+                                <p>It takes a really long time to get to this event. Worth it?&nbsp;Maybe.</p>
+                                <p>> <cite>Jill Carson</cite></p>
+                            </blockquote>
+                        </div>
+                        <div class="grid-column span-one-third mt1">
+                            <blockquote class="blockquote">
+                                <p>Sometimes I like to be glamorous. It makes me feel good&nbsp;inside.</p>
+                                <p>> <cite>Chase Harrop</cite></p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA -->
+                <section class="align--center pt3 pb3">
+                    <p class="h3 mb2">Tickets start at&nbsp;$950.</p>
+                    <a href="" class="btn btn--outline">Download Schedule</a>
+                    <a href="https://www.eventbrite.com/" class="btn btn--default">Get a ticket →</a>
+                    <p class="small mt1 text--gray">Tickets available on Eventbrite.</p>
+                </section>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt2 pb3 align--center">
+            <ul class="no-bullets list--inline mb0">
+                <li class="m1 block-on-mobile"><a href="https://www.twitter.com" class="link"><img class="icon" src="/img/twitter.svg" alt="Twitter"> Twitter</a></li>
+                <li class="m1 block-on-mobile"><a href="https://www.facebook.com" class="link"><img class="icon" src="/img/facebook.svg" alt="Facebook"> Facebook</a></li>
+                <li class="m1 block-on-mobile"><a href="https://www.instagram.com" class="link"><img class="icon" src="/img/instagram.svg" alt="Instagram"> Instagram</a></li>
+                <li class="m1 block-on-mobile"><a href="https://www.youtube.com" class="link"><img class="icon" src="/img/youtube.svg" alt="YouTube"> YouTube</a></li>
+            </ul>
+            <p class="mt1 small text--gray">Design by <a href="https://www.eatapapaya.com" class="link">Papaya</a>.</p>
+        </footer>
+
+    </div>
+    </div>
+
+    </body>
+</html>
+
