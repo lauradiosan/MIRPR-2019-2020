@@ -1,0 +1,16 @@
+#container {
+  background-color: rgba(240, 70, 70, 0.8);
+  margin: 0;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  font-size: 0.8em;
+}
+
+#rights {
+  margin-left: 1em;
+}
+#rights a {
+  color: blue;
+}

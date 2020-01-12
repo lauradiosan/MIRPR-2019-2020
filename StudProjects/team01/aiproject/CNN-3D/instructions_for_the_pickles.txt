@@ -1,0 +1,23 @@
+How to train your CNN:
+
+0.  Anaconda prompt -> conda activate *your environment* -> cd *path to the CNN files*
+conda activate "myenv" -> cd D:\Facultate2\ProiectMI\CNN-3D
+1.  To make stuff run, I installed tensorflow, keras, numpy, nibabel, cv2, pickle. 
+I hope I covered them all. 
+conda install -c anaconda tensorflow
+conda install -c anaconda keras
+conda install -c anaconda numpy
+conda install -c conda-forge nibabel
+conda install -c conda-forge opencv
+conda install -c conda-forge pickle
+
+2.  To get the .pickle files with the processed data, you need to run the process_data.py
+	So,
+		python process_data.py1
+
+3.  (you need the files from step 2)
+    To train the CNN, you simply write the command:
+
+		python train.py
+
+   And the program will print the training progress and the accuracy of the training. 

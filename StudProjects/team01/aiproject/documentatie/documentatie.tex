@@ -1,0 +1,169 @@
+\documentclass[a4papaer,12pt]{article}
+\usepackage{geometry}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+\begin{document}
+
+\title{\Huge{\textbf{Documentație}}}
+\author{By Mardaloescu Ana-Maria, Marian Andrada, \\ Matei Sergiu, Molnar Radu}
+\date{}
+\maketitle
+
+\newpage
+
+\tableofcontents
+\pagenumbering{arabic}
+
+\newpage
+
+\section{Descrierea aplicației}
+Un student la medicină dispune de o aplicație care îi prezintă vizual informații relevante despre inimă și malformațiile investigate și îl ajută să învețe despre acestea. Astfel, plecând de la informații preluate în format MRI, aplicația permite vizualizarea 3D a inimii, precum si a unor defecte posibile. 
+\\
+\indent Vizualizând imaginea 3D (încărcată de către student) studentul poate verifica dacă există sau nu malformații ale inimii, iar dacă da, atunci identificarea acesteia prin încercuire. La final, aplicația îi evidențiază malformația.
+
+\section{Flow-ul aplicației}
+Se pornește aplicația, se alege opțiunea de încărcare a imaginii în format nifti (.nii). Se încarcă imaginea și se dă check de către utilizator dacă acesta consideră ca inima din imagine prezintă malformații sau nu. Se transmite imaginea unui server unde se aplică un algoritm inteligent ce detectează malformația, după care este transformată în format 3D și trimisă inapoi la interfața cu utilizatorul, acesta având posibilitatea incarcarii unei noi imagini.
+
+\section{Descrierea plastică a problemei}
+Pe baza unei imagini (MRI) a unei inimi se aceasta prezinta una dintre cele doua cazuri: cazul normal sau cazul hypertrophic cardiomyopathy analizand imaginea la nivelul pixelilor.
+
+
+\section{Descrierea formală a problemei}
+Dezvoltarea unui algoritm ce realizează clasificarea inimilor dintr-o imaginea MRI in cadrul a doua clase: normal case si hypertrophic cardiomyopathy case. \\
+\indent Algoritmul analizeaza inima cu ajutorul unei retele CNN si determina daca inima este una sanatoasa sau nu.
+
+\section{Descrierea algoritmului}
+Am dezvoltat un algoritm ce foloseste un CNN(Convolutional neural network) deoarece acesta este mai eficient decat o retea neuronala clasica cand vine vorba de imagini(o imagine de 100x100, adica o matrice de 100x100, are 10000 de weight-uri pentru stratul 2). Operatia de convolutie consta in luarea unei sectiuni(3x3) din imagine() si aplicarea unei functii pe acea zona rezultatul urmand sa fie valoarea zonei. Polling-ul este o operatie a CNN care consta in luarea unei zone din matrice(2x2) si alegerea valorii maxime din acea zona pentru a forma noua matrice rezultat.CNN-ul are 3 straturi convolutionale 3x3 cu functii relu de activare, si 2 straturi de pooling de tip max, 2x2. 
+
+\section{Descrirea Metodologiei}
+Pentru 50 de date din 4 categorii dintre care s-au ales 10 pentru test, s-a obtinut un rezultat de 0,20 acuratete. Algoritmul a rulat pentru 2, 5 si 10 epoci, obtinand rezultate mai proste cu cat mai multe epoci rula.
+
+Faza 1:
+S-a folosit modelul secvential (stiva de straturi) impreuna cu 3 straturi Conv2D, fiecare cu filtre 64, dimensiunea pooling-ului de (3,3), functia de activare 'relu'. Pentru straturile de pooling s-a folosit MaxPooling2D cu dimensiune de (2,2). In final s-au adaugat 2 straturi Dense cu functia de activare 'relu' respectiv 'softmax'. 
+S-au folosit 56 date de train, impartite in 4 categorii si 5 date de train. Datele au fost prelucrate folosind pickle. Pentru 3 epoci s-a obtinut o acuratete de 0.3 si un loss de 2.98. In cazul a 5 epoci s-a obtinut o acuratete de 0.44 si un loss de 1.42. Pentru cazuri cu 10 epoci algoritmul face overfitt, acuratetea fiind 1, iar loss-ul 0.03.
+Posibile cauze: s-a presupus ca rezultatele ar putea fi influentate de neuniformizarea datelor, acestea fiind 'alese' asftel incat sa nu fie necesara interpolarea (date cu aceeasi dimensiune z) sau de numarul redus al acestora. 
+
+Faza 2:
+S-a incercat prelucrarea datelor in mod diferit, fara normalizare, dar cu o retea care sa primeasca ca si input 4 parametri fara constrangeri. La rularea algoritmului acesta se opreste in faza de train datorita memoriei prea putine.
+
+Faza 3:
+Se incearca interpolarea lineara a datelor folosind 'interpolate' din libraria 'scipy'.
+
+\section{Architecture}
+Layers:
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline
+	Layer & Type & Convolution & Channels & Stride & Options on layer\\
+	\hline
+	1 & convolutional & 3x3 & 32 & - & - \\
+	\hline
+	2 & pooling & - & - & - & max \\
+	\hline
+	3 & convolutional & 3x3 & 64 & - & - \\
+	\hline
+	4 & pooling & - & - & - & max \\	
+	\hline
+	5 & convolutional & 3x3 & 64 & - & - \\
+	\hline
+	6 & flatten & - & - & - & -\\	
+	\hline
+	7 & relu & - & - & - & 64 \\
+	\hline
+	8 & softmax & - & - & - & 10\\
+	\hline
+\end{tabular}
+
+
+\newpage
+
+\section{Related work}
+Fiecare student a căutat alte studii făcute în domeniu, care ar putea fi utile la realizarea acestui proiect.
+
+\subsection{Ana}
+
+\textbf{Titlul studiului} : \begin{Large}
+Four-Chamber Heart Modeling and Automatic Segmentation for 3D Cardiac CT Volumes Using Marginal Space Learning and Steerable Features
+\end{Large}
+\\\\
+\indent \textbf{Realizatori} : \begin{large}
+Yefeng Zheng, Adrian Barbu, Bogdan Georgescu, Michael Scheuering, and Dorin 
+Comaniciu
+\end{large}
+\\\\
+\indent \textbf{Date} : 457 de volume cu cele 4 camere etichetate manual, provenite de la 186 de pacienți cu diferite boli cardiovasculare
+\\\\
+\indent \textbf{Algoritmi folosiți} : marginal space learning (MSL) și steerable features.
+\\\\
+\indent \textbf{Concluzii și rezultate} : o viteză medie de 4 secunde per volum pentru segmentarea celor 4 camere. Abordare generală de segmentare– se poate aplica pe mai multe organe. 
+
+
+\subsection{Andrada}
+
+\textbf{Titlul studiului} : \begin{Large}
+Deep Learning Techniques for Automatic MRI
+Cardiac Multi-structures Segmentation and
+Diagnosis: Is the Problem Solved?
+\end{Large}
+\\\\
+\indent \textbf{Realizatori} : \begin{large}Olivier Bernard, Alain Lalande, Clement Zotti, Frederick Cervenansky, Xin Yang, Pheng-Ann Heng, Irem Cetin,
+Karim Lekadir, Oscar Camara, Miguel Angel Gonzalez Ballester, Gerard Sanroma, Sandy Napel,
+Steffen Petersen, Georgios Tziritas, Elias Grinias, Mahendra Khened, Varghese Alex Kollerathu,
+Ganapathy Krishnamurthi, Marc-Michel Rohe, Xavier Pennec, Maxime Sermesant, Fabian Isensee, Paul Jager,
+Klaus H. Maier-Hein, Peter M. Full, Ivo Wolf, Sandy Engelhardt, Chrisitan F. Baumgartner, Lisa M. Koch,
+Jelmer M. Wolterink, Ivana Isgum, Yeonggul Jang, Yoonmi Hong, Jay Patravali, Shubham Jain, Olivier Humbert,
+and Pierre-Marc Jodoin
+\end{large}
+\\\\
+\indent \textbf{Date} : Datele de antrenament au fost furnizate de ACDC (Automatic Cardiac Diagnosis Challenge), 70 de imagini MRI cu inimi sănătoase și 30 cu inimi bolnave, iar datele de test au fost 50 imagini MRI 
+\\\\
+\indent \textbf{Algoritmi folosiți} : Isensee a folosit o serie de atribute dinamice folosind o rețea neuronală cu 50 de multi-layere, iar pentru clasificare a folosit random forest 
+\\\\
+\indent \textbf{Concluzii și rezultate} : Ca și rezultat s-a obținut o acuratețe de 0.92.
+
+
+\subsection{Sergiu}
+
+\textbf{Titlul studiului} : \begin{Large}
+Screening for cardiac contractile dysfunction using an artificial intelligence–enabled electrocardiogram
+(Funcția contractilă a miocardului)
+\end{Large}
+\\\\
+\indent \textbf{Realizatori} : \begin{large} Zachi I. Attia, Suraj Kapa, Francisco Lopez-Jimenez, Paul M. McKie, Dorothy J. Ladewig, Gaurav Satam, Patricia A. Pellikka, Maurice Enriquez-Sarano, Peter A. Noseworthy, Thomas M. Munger, Samuel J. Asirvatham, Christopher G. Scott, Rickey E. Carter \& Paul A. Friedman 
+\end{large}
+\\\\
+\indent \textbf{Date} : S-au folosit datele electrocardiogramelor a 44.959 pacienți ai clinicii Mayo pentru antrenare, care conțineau date și despre fracţia de ejecţie a ventriculului stâng. Testarea s-a făcut pe 52.870 de pacienți
+\\\\
+\indent \textbf{Algoritmi folosiți} : Clasificare folosind CNN , funcția de predicție definită ca fracția de ejecție <= 35%
+\\\\
+\indent \textbf{Concluzii și rezultate} : Pe setul de test acuratetea a fost de 85.7\%, specificitate de 85.7\%, senzitivitate de 86.3\% si AUC de 0.93
+\\\\
+
+\subsection{Radu}
+
+\textbf{Titlul studiului} : \begin{Large}\begin{enumerate}[label=\Roman*, font=\bfseries]
+\item Dilated convolutional neural networks for cardiovascular MR segmentation in congenital heart disease, 2017
+\item Automated cardiovascular segmentation in patients with congenital heart disease from 3D CMR scans: Combining multi-atlases and level-sets, 2017
+\end{enumerate}
+\end{Large}
+
+\indent \textbf{Realizatori} : \begin{large}\begin{enumerate}[label=\Roman*, font=\bfseries]
+\item Jelmer M. Wolterink, Tim Leiner, Max A. Viergever and Ivana Isgum
+\item Rahil Shahzad, Shan Gao, Qian Tao, Oleh Dzyubachyk and Rob van der Geest
+\end{enumerate}
+\end{large}
+
+\indent \textbf{Date} : HVSMR 2016 MICCAI challenge organizer
+\\\\
+\indent \textbf{Algoritmi folosiți} : O primă metodă pentru împărțirea inimii din imagine și pentru determinarea părților ei se poate folosi o segmentare tip atlas-based pentru învățarea zonelor pe baza unor cunoștințe anterioare(se poate folosi un gradient descrescător pentru potrivirea atlasului cu cea a imaginii). Pentru detecția mușchiului miocard se poate folosi o clusterizare cu 2 clase una pentru sânge iar cealaltă pentru mușchi. Această împărțire ne poate ajuta la determinarea bolilor congenitale.
+\indent O a doua metodă găsită pentru rezolvarea acestei probleme ar fi folosirea unei rețele neuronale convoluțională. O astfel de rețea este perfectă pentru procesarea de imagini. Aceasta va fi antrenată să determine vasele de sânge și mușchiul miocard.
+\\\\
+\indent \textbf{Concluzii și rezultate} :
+\\ 
+\indent Metoda 1: Dice index de 0.89 pentru vasele de sânge și 0.75 pentru țesuturile miocardice.
+\\
+\indent Metoda 2: Dice index de 0.93 pentru vasele de sânge și 0.80 pentru țesuturile miocardice
+
+\end{document}
