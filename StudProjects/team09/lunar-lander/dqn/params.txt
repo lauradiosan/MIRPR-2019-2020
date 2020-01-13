@@ -1,0 +1,8 @@
+                 epsilon_init=1.0,
+                 epsilon_min=.01,
+                 alpha=0.001,
+                 gamma=.99,
+                 batch_size=64,
+                 epsilon_decay=.996,  # to decrease epsilon by *
+                 max_replay_memory_size=10 ** 6)
+
