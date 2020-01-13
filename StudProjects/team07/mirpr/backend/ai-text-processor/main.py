@@ -1,10 +1,13 @@
 import nltk
+from nltk.stem import WordNetLemmatizer 
+from nltk.corpus import wordnet
+from nltk.parse.corenlp import CoreNLPDependencyParser
 
 import sys
 import functools
 import random
 import traceback
-import pprint
+import json
 
 def isntPunct(tree):
   punctuationSymbols = ",.!?@#$%^&*()_+=-<>/\\|[]{}'\":;`~"
@@ -25,14 +28,67 @@ def fromModal(md):
 
   return random.random()
 
+def flatten(l, acc = []):
+  if type(l) is list:
+    for elem in l:
+      flatten(elem, acc)
+
+    return acc
+  else:
+    acc.append(l)
+    return acc
+
+def flattenTree(tree):
+  acc = []
+
+  if type(tree) != str and len(tree) == 1 and type(tree[0]) == str and hasProperLabel(tree.label()[0]):
+    acc.append((tree.label(), tree[0]))
+  else:
+    for item in tree:
+      if len(item) == 0:
+        continue
+
+      if type(item) != str:
+        if len(item) == 1 and type(item[0]) == str and hasProperLabel(item.label()[0]):
+          acc.append((item.label(), item[0]))
+        else:
+          flattened = sum([flattenTree(i) for i in item], [])
+          acc.extend(flattened)
+
+  return acc
+
+def hasProperLabel(item):
+  first = item[0]
+
+  return first == 'J' or first == 'N' or first == 'V' or first == 'R'
+
+def lemmatizeSafe(tagType, text, lemmatizer):
+  try:
+    return lemmatizer.lemmatize(text, tagType)
+  except:
+    return lemmatizer.lemmatize(text)
+
+def lemmatizeSafely(text, lemmatizer):
+  minimal = text
+
+  w = wordnet
+  for tag in [w.ADJ, w.VERB, w.NOUN, w.ADV, None]:
+    lemmatized = lemmatizeSafe(tag, text, lemmatizer)
+    if len(lemmatized) < len(minimal):
+      minimal = lemmatized
+
+  return minimal
+
 def fromVp(vpElems):
-  propSets = vpElems[1]
+  lemmatizer = WordNetLemmatizer() 
+  propSets = ' '.join(list(map(lambda node: lemmatizeSafely(node[1], lemmatizer), flattenTree(vpElems[1]))))
   condType = None
   cond = None
 
-  if len(vpElems) > 2:
-    condType = vpElems[2][0][0]
-    cond = propToRule(vpElems[2][1][:])
+  # This would allow adding additional constraints to a constraint.
+  # if len(vpElems) > 2:
+  #   condType = vpElems[2][0][0]
+  #   cond = propToRule(vpElems[2][1][:])
 
   return {'props': propSets, 'cond-type': condType, 'cond': cond}
 
@@ -60,8 +116,8 @@ def propToRule(leaves):
 
     return {'np': np, 'chance': chance, 'prop': prop}
   except Exception as x:
-    traceback.print_exc(file=sys.stdout)
-    return False
+    traceback.print_exc(file=sys.stderr)
+    return {'np': 'it', 'chance': 1.0, 'prop': None}
 
 def sentenceToRule(sentence):
   sentences = list(filter(isntPunct, sentence[:]))
@@ -77,16 +133,37 @@ def sentenceToRule(sentence):
 
   return rule
 
+def traverseDepGraph(nodes, lemmatizer):
+  weightedTags = []
+
+  for index in nodes:
+    node = nodes[index]
+
+    weight = 1.0
+
+    if node['word'] is not None and hasProperLabel(node['tag']):
+      if 'neg' in node['deps']:
+        weight = 0.0
+
+      weightedTags.append({ 'word': lemmatizeSafely(node['word'], lemmatizer), 'weight': weight })
+
+  return weightedTags
+
 parser = nltk.parse.corenlp.CoreNLPParser()
 rawInput = sys.argv[1]
 
-# Keyword to synthesize the rules - cannot conflict with other types of output since those are
-# wrapped in a Tree() sexp.
-if rawInput == 'Done.':
-  print('#')
-  exit(0)
-
 sentence = next(parser.raw_parse(rawInput))[0]
-
 rules = propToRule(sentence)
-pprint.pprint(rules)
+
+lemmatizer = WordNetLemmatizer() 
+tags = list(set(map(lambda node: lemmatizeSafely(node[1], lemmatizer), flattenTree(sentence))))
+
+dependency_parser = CoreNLPDependencyParser()
+
+result = dependency_parser.raw_parse(rawInput)
+
+depGraph = next(result)
+
+depGraphResult = traverseDepGraph(depGraph.nodes, lemmatizer)
+
+print(json.dumps({ 'modality': flatten(rules, []), 'depGraph': depGraphResult, 'flatTags': tags }))

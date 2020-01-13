@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "net": "^1.0.2",
+    "shelljs": "^0.8.3",
     "ws": "^7.1.2"
   }
 }

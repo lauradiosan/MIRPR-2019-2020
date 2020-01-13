@@ -59,9 +59,6 @@ showPage model =
                 , hr [] []
                 , button [ onClick WsMsgSend ] [ text "Send Message" ]
                 , hr [] []
-                , button [ onClick WsMsgSendImg ] [ text "Send Message With Image" ]
-                , hr [] []
-                , input [ type_ "file", id fileId ] []
                 ]
             ]
         ]
@@ -118,11 +115,18 @@ type Msg
 
 
 port wsMsgSend : String -> Cmd msg
-port wsMsgSendImg : (String, String) -> Cmd msg
+
+
+port wsMsgSendImg : ( String, String ) -> Cmd msg
+
+
 port wsMsgRecv : (String -> msg) -> Sub msg
 
+
 fileId : String
-fileId = "file-upload-id"
+fileId =
+    "file-upload-id"
+
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
@@ -144,7 +148,7 @@ update msg model =
                 message =
                     model.inputText
             in
-            ( { model | messages = List.append model.messages [ UserMessage message ] }, wsMsgSendImg (fileId, message) )
+            ( { model | messages = List.append model.messages [ UserMessage message ] }, wsMsgSendImg ( fileId, message ) )
 
         WsMsgRecv message ->
             ( { model | messages = List.append model.messages [ BotMessage message ] }, Cmd.none )

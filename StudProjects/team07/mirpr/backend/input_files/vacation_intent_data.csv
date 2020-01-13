@@ -1,0 +1,82 @@
+Sentence, Intent
+Hello, greet
+Good morning, greet
+Good afternoon, greet
+Good evening, greet
+It’s nice to meet you, greet
+It’s a pleasure to meet you, greet
+Hi, greet
+Morning, greet
+How are things, greet
+What’s new, greet
+It’s good to see you, greet
+G’day, greet
+Howdy, greet
+Hey, greet
+Hey there, greet
+What’s up, greet
+Sup, greet
+How’s it going, greet
+What’s happening, greet
+Yo, greet
+Show me a vacation place, vacation_search
+I want to go on a vacation, vacation_search
+I want vacation, vacation_search
+Where is a nice vacation place, vacation_search
+How to find a vacation, vacation_search
+Search for vacation, vacation_search
+I want to go on a trip, vacation_search
+How can I choose a vacation place, vacation_search
+I want to find a vacation place, vacation_search
+I do not know where to go to in my vacation, vacation_search
+I want a top vacation spot, vacation_search
+Recommend me the best vacation spot, vacation_search
+Recommend me a place to visit, vacation_search
+Search for a place to travel to, vacation_search
+Help me decide a good vacation spot, vacation_search
+Search for places in Paris for my vacation, vacation_search
+Help me explore a new place, vacation_search
+Recommend a new place to go to, vacation_search
+I want to pursuit a new country, vacation_search
+Show me a good place to visit, vacation_search
+I want to review my last vacation place, vacation_review
+I want to give a review, vacation_review
+Show me the survey for my vacation, vacation_review
+Can I review my last vacation place, vacation_review
+I want to evaluate, vacation_review
+I would like to give a mark to my last vacation place, vacation_review
+I want to tell you about my last vacation place, vacation_review
+I would like to review the last place I went to, vacation_review
+I want to revision my last vacation place, vacation_review
+I have a complaint about my last vacation, vacation_review
+I enjoyed my last vacation, vacation_review
+The last vacation place I have been to has been a blast, vacation_review
+I did not like my last vacation place, vacation_review
+I love the last place I visited, vacation_review
+The food on my last vacation trip has been amazing, vacation_review
+The accommodation I had was bad, vacation_review
+There is no place that can compare to the last place I have visited, vacation_review
+I would always want to come back to that spot, vacation_review
+My last vacation was shit, vacation_review
+Can we talk about my last vacation?, vacation_review
+I want the list of vacation places, vacation_list
+Can I see the list of vacation spots?, vacation_list
+Is there a list of vacation places you recommend?, vacation_list
+List vacations, vacation_list
+How many vacation places are there?, vacation_list
+Could you show me the database of vacations?, vacation_list
+I still don't know which vacation to choose, vacation_list
+Show me the list of vacations, vacation_list
+It is not clear what choices do I have, vacation_list
+Show me your vacation options, vacation_list
+List the vacation places you have, vacation_list
+Tell me how can I choose my vacation, vacation_list
+Let me see the vacation plan, vacation_list
+List the vacation index, vacation_list
+Get the vacation list, vacation_list
+Look for the vacation list, vacation_list
+Show me what you got, vacation_list
+Show me the goodies, vacation_list
+Show me those vacation places, vacation_list
+Show me what I want to visit, vacation_list
+
