@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+    const container = document.getElementById("container");
+    const all_emotions = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'];
+    // const emotions = [["Happy", "Surprise"], ["Happy", "Sad"], ["Fear", "Happy"], ["Fear", "Happy"]];
+    const emotions = JSON.parse(sessionStorage.getItem("emotions"));
+    const emotions_count = emotions.length;
+    z_data = [];
+    for (const primary of all_emotions) {
+        const z_data_item = [];
+        for (const secondary of all_emotions) {
+            let count = null;
+            if (primary !== secondary) {
+                count = emotions.reduce((acc, crt) => {
+                    if (crt[0] === primary && crt[1] === secondary) {
+                        return acc + 1;
+                    } else {
+                        return acc;
+                    }
+                }, 0);
+            }
+            z_data_item.push(count !== null ? count / emotions_count : null);
+        }
+        z_data.push(z_data_item);
+    }
+    const data = [
+        {
+            z: z_data,
+            x: all_emotions,
+            y: all_emotions,
+            type: 'heatmap',
+            colorscale: [
+                [0, '#ffffff'],
+                [1, '#ff0000']
+            ]
+        }
+    ];
+
+    Plotly.newPlot('container', data);
+
+</script>
+</body>
+</html>
