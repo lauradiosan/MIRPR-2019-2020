@@ -1,0 +1,13 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/input_form.css' %}">
+<form class="input-form" action="{% url 'send_text' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <textarea name="input-text" placeholder="Type your requests" rows="4"></textarea>
+  <input class="button" type="submit" name="send" value="Send" />
+  <input class="button" type="submit" name="reset" value="Reset" />
+  <div class="upload-btn-wrapper">
+    <button class="button">Upload a file</button>
+    <input class="upload" type="file" name="image" accept="image/*">
+  </div>
+</form>

@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/accomodation.css' %}">
+<div class="container">
+  <a href={{accomodation_link}} target="_blank" class="accomodation-link">{{accomodation_name}}</a>
+  <p>Overall sentiment for this hotel: {{accomodation_sentiment}}</p>
+  <p>What users like about this hotel</p>
+  <img src="{{accomodation_positive_reviews_wordcloud}}" alt="Positive Reviews Wordcloud" class="image-wordcloud" />
+  <p>What users dislike about this hotel</p>
+  <img src="{{accomodation_negative_reviews_wordcloud}}" alt="Negative Reviews Wordcloud" class="image-wordcloud" />
+</div>

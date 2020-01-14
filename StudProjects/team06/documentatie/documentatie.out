@@ -1,0 +1,19 @@
+\BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 What? Why? How?}{chapter.1}% 2
+\BOOKMARK [0][-]{chapter.2}{2 Scientific Problem}{}% 3
+\BOOKMARK [1][-]{section.2.1}{2.1 Open text analysis}{chapter.2}% 4
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Extract number of rooms}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Extract number of children}{section.2.1}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 Image classifier}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{2.3 Reviews analyzer}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{3 State of art/Relate work}{}% 9
+\BOOKMARK [0][-]{chapter.4}{4 Proposed approach}{}% 10
+\BOOKMARK [0][-]{chapter.5}{5 Application \(numerical validation\)}{}% 11
+\BOOKMARK [1][-]{section.5.1}{5.1 Methodology}{chapter.5}% 12
+\BOOKMARK [1][-]{section.5.2}{5.2 Data}{chapter.5}% 13
+\BOOKMARK [2][-]{subsection.5.2.1}{5.2.1 Image classifier}{section.5.2}% 14
+\BOOKMARK [1][-]{section.5.3}{5.3 Results}{chapter.5}% 15
+\BOOKMARK [0][-]{chapter.6}{6 Conclusion and future work}{}% 16
+\BOOKMARK [1][-]{section.6.1}{6.1 Open text analysis}{chapter.6}% 17
+\BOOKMARK [1][-]{section.6.2}{6.2 Image classifier}{chapter.6}% 18
+\BOOKMARK [1][-]{section.6.3}{6.3 Reviews analyzer}{chapter.6}% 19

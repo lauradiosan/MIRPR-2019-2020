@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/chat_box.css' %}">
+<div class="chat-box received-chat-box final-response-chat-box">
+  <p>{{text_to_display}}</p>
+  <div class="accomodations-list">
+    {% for accomodation in accomodations_list %}
+      {% include "accomodation.html" with accomodation_name=accomodation.hotel_name accomodation_link=accomodation.url accomodation_sentiment=accomodation.sentiment accomodation_positive_reviews_wordcloud=accomodation.positive_reviews_wordcloud accomodation_negative_reviews_wordcloud=accomodation.negative_reviews_wordcloud%}
+    {% endfor %}
+  </div>
+</div>
