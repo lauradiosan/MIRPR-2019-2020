@@ -3,10 +3,11 @@
 \contentsline {section}{\numberline {3}Descrierea plastică a problemei}{2}% 
 \contentsline {section}{\numberline {4}Descrierea formală a problemei}{2}% 
 \contentsline {section}{\numberline {5}Descrierea algoritmului}{2}% 
-\contentsline {section}{\numberline {6}Descrirea Metodologiei}{3}% 
+\contentsline {section}{\numberline {6}Descrierea Metodologiei}{3}% 
 \contentsline {section}{\numberline {7}Architecture}{4}% 
-\contentsline {section}{\numberline {8}Related work}{5}% 
-\contentsline {subsection}{\numberline {8.1}Ana}{5}% 
-\contentsline {subsection}{\numberline {8.2}Andrada}{5}% 
-\contentsline {subsection}{\numberline {8.3}Sergiu}{6}% 
-\contentsline {subsection}{\numberline {8.4}Radu}{7}% 
+\contentsline {section}{\numberline {8}Testing Metrics}{4}% 
+\contentsline {section}{\numberline {9}Related work}{8}% 
+\contentsline {subsection}{\numberline {9.1}Ana}{8}% 
+\contentsline {subsection}{\numberline {9.2}Andrada}{8}% 
+\contentsline {subsection}{\numberline {9.3}Sergiu}{9}% 
+\contentsline {subsection}{\numberline {9.4}Radu}{10}% 

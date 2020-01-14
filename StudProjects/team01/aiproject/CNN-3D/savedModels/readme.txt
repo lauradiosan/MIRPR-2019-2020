@@ -1,0 +1,1 @@
+Modelul salvat e prea mare pentru a fi incarcat pe git

@@ -5,7 +5,14 @@
 
 .message{
   position: relative;
-  top: 50vh;
+  top: 20vh;
   color: red;
   font-size: 2em;
+}
+
+.image {
+  position: relative;
+  top: 15vh;
+  left: 23vw;
+  text-align: center;
 }
