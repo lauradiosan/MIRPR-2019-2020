@@ -1,0 +1,24 @@
+.chat-box {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.sent-chat-box {
+  border-color: lighten(#20B2AA, 10%);
+  background-color: #20B2AA;
+  margin-left: 20%;
+}
+
+.received-chat-box {
+  border-color: lighten(#E8E8E8, 10%);
+  background-color: #E8E8E8;
+  margin-right: 20%;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}

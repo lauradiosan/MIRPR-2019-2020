@@ -1,0 +1,7 @@
+apartment
+building
+door
+hotel
+room
+outside
+time

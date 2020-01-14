@@ -1,0 +1,32 @@
+.chat-box {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+  font-weight: 400;
+  color: #383838;
+}
+
+.sent-chat-box {
+  /* border-color: #22BEB6; */
+  border-color: #20B2AA;
+  background-color: #20B2AA;
+  margin-left: 20%;
+}
+
+.received-chat-box {
+  /* border-color: #E9E9E9;
+  background-color: #E8E8E8; */
+  border-color: white;
+  background-color: white;
+  margin-right: 20%;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
