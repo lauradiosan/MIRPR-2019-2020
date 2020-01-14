@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Report</title>
+</head>
+<body>
+<canvas id="container" style="height: 75%;"></canvas>
+
+<script>
+    const emotions = JSON.parse(sessionStorage.getItem("emotions"));
+    const ctx = document.getElementById('container').getContext('2d');
+
+    const all_emotions = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral'];
+    let primary_emotions = emotions.map(el => el[0]);
+    const data = [];
+    for (const el of all_emotions) {
+        let count = primary_emotions.reduce((acc, current) => {
+            if (current === el) {
+                return acc + 1;
+            } else {
+                return acc;
+            }
+        }, 0);
+        data.push(count)
+    }
+
+    let chartData = {
+        datasets: [{
+            data: data,
+            backgroundColor: [
+                '#203ef6',
+                '#00ebf6',
+                '#f58f00',
+                '#ff0d26',
+                '#faff1c',
+                '#c500ff',
+                '#00c354'
+            ]
+        }],
+        labels: all_emotions,
+
+    };
+
+    let options = {};
+
+    const myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: chartData,
+        options: options
+    });
+
+</script>
+</body>
+</html>
