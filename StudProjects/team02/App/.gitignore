@@ -1,0 +1,6 @@
+Algorithms/venv/
+venv/
+Algorithms/Test/test_dataset/S/
+../.idea
+../.dist
+*/__pycache__

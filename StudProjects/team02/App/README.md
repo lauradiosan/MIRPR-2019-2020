@@ -28,4 +28,5 @@ Web application for viewing the occupancy of parking spots from a video with a `
     - pip install matplotlib
     - pip install pafy
     - pip install youtube_dl
-3. Run `Mockup/app.py` to start the application
+3. Run `Mockup/run.bat` to start the application
+4. Open `http://127.0.0.1:5000/` to access the webpage

@@ -29,8 +29,7 @@ def fill_db(db_path, csv_path):
             spots.append(custom_dict)
             line_count += 1
 
-    global test_dataset, weather_sunny
-    test_images = os.listdir(test_dataset)
+    test_images = ["frame.png"]
     for img_url in test_images:
         db.insert({"url": img_url, "spots": spots})
 
@@ -38,5 +37,4 @@ def fill_db(db_path, csv_path):
 
 
 if __name__=="__main__":
-    global test_dataset, test_boxes, db_path
-    fill_db(db_path, test_dataset + test_boxes)
+    fill_db("db.json", "boxes.csv")

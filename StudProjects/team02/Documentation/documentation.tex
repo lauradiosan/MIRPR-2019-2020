@@ -1,34 +1,148 @@
-\documentclass[12pt]{article}
+%latex model.tex
+%bibtex model
+%latex model.tex
+%latex model.tex
+%dvipdfm model.dvi
 
-\usepackage{sbc-template}
-\usepackage{graphicx, url}
-\usepackage{hyperref}
-\usepackage[utf8]{inputenc}
-\usepackage[rightcaption]{sidecap}
 
-\graphicspath{ {./images/} }
-     
+\documentclass[runningheads,a4paper,11pt]{report}
+
+\usepackage{algorithmic}
+\usepackage{algorithm} 
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{comment} 
+\usepackage{epsfig} 
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{geometry} 
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref} 
+\usepackage{multicol}
+\usepackage{multirow} 
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+\geometry{a4paper,top=3cm,left=2cm,right=2cm,bottom=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Video-based parking spot detection using machine learning}
+\fancyhead[RE,LO]{Team 02}
+\fancyfoot[RE,LO]{MIRPR 2019-2020}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \footrulewidth\hfill}}
+
+\hypersetup{
+pdftitle={artTitle},
+pdfauthor={name},
+pdfkeywords={pdf, latex, tex, ps2pdf, dvipdfm, pdflatex},
+bookmarksnumbered,
+pdfstartview={FitH},
+urlcolor=cyan,
+colorlinks=true,
+linkcolor=red,
+citecolor=green,
+}
+% \pagestyle{plain}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\linespread{1}
+
+% \pagestyle{myheadings}
+
+\makeindex
+
+
+\begin{document}
+
+\begin{titlepage}
 \sloppy
+\begin{center}
+BABE\c S BOLYAI UNIVERSITY, CLUJ NAPOCA, ROM\^ ANIA
 
-\title{Video-based parking spot detection using machine learning}
+FACULTY OF MATHEMATICS AND COMPUTER SCIENCE
 
-\author{Olga Turcan, Viorel Gurdis, Raul-Robert Zavaczki}
+\vspace{6cm}
 
-\address{Babes-Bolyai University, Cluj-Napoca}
+\Huge \textbf{Video-based parking spot detection using machine learning}
+
+\vspace{1cm}
+
+\normalsize -- MIRPR report --
+
+\end{center}
 
 
-\begin{document} 
+\vspace{5cm}
 
-\maketitle
+\begin{flushright}
+  \Large{\textbf{Team members}}\\
+  \normalsize Olga \c Turcan, Computer Science (in German), 732 (toig0214@scs.ubbcluj.ro) \\
+  \normalsize Viorel Gurdi\c s, Computer Science (in German), 731 (gvig0169@scs.ubbcluj.ro)\\
+  \normalsize Raul-Robert Zavaczki, Computer Science (in German), 732 (zrig0219@scs.ubbcluj.ro)
+\end{flushright}
+
+\vspace{4cm}
+
+\begin{center}
+2019-2020
+\end{center}
+
+\end{titlepage}
+
+\pagenumbering{gobble}
 
 \begin{abstract}
-  Living in a big city, it's a common problem to find available parking 
+	Living in a big city, it's a common problem to find available parking 
   spaces for your car. Having a real time parking space 
   detection system based on images provided by CCTVs could considerably 
   improve the parking experience at a relatively low cost.
 \end{abstract}
 
-\section{Introduction}
+
+\tableofcontents
+
+\newpage
+
+\listoftables
+\listoffigures
+
+\newpage
+
+\setstretch{1.5}
+
+
+
+\newpage
+
+\pagenumbering{arabic}
+
+
+ 
+
+
+\chapter{Introduction}
+\label{chapter:introduction}
+
+\section{Problem definition}
+\label{section:what}
 
 Statistically the average time spent searching for a parking spot represents \textbf{7.8 minutes}.
 That is a waste of time and can also cause traffic congestion. There are several types of 
@@ -48,7 +162,9 @@ consideration that the application should work in different weather conditions. 
 of the processed information in real-time, for which we will try to compare different AI algorithms and will choose 
 the one with the best balance between accurate results and small processing time.
 
-\section{Related Work}
+\chapter{Related work}
+\label{chapter:stateOfArt}
+
 
 One approach to video-based real-time parking space detection application 
 was described in the academic paper of \cite{tschentscher}. To minimize 
@@ -104,24 +220,18 @@ for each subsequent image, allowing them to generate an 80x80 pixel
 image for each parking spot in an image, allowing them to normalize
 the inputs.
 \par
-The most notably performer was an MLP(15,15) classifier, which got an accuracity
+The most notably performer was an MLP(15,15) classifier, which got an accuracy
 of 88.2\% on the mentioned FMPH dataset. Among the other tested approaches
-were kNN algorithms with k=1 and k=3, getting an accuracity of 82.2\% and
+were kNN algorithms with k=1 and k=3, getting an accuracy of 82.2\% and
 82.3\% respectively. Another approach discussed in the paper is using
 Logistic Regression to classify whether a parking spot is free or not,
 but it proved to be the most underperforming algorithm used, scoring
-only 74,7\% accuracity.
+only 74,7\% accuracy.
 
-\subsection{Useful Tools}
 
-The following tools were used for implementing above mentioned approaches.
-\begin{itemize}
-  \item Tensorflow
-  \item Keras
-  \item scikit-learn
-\end{itemize}
+\chapter{Proposed approach}
+\label{chapter:proposedApproach}
 
-\section{Methodology}
 Our research focuses on detecting the occupancy of parking lots from the images obtained by CCTVs.
 The algorithm we've implemented consists of a Convolutional Neural Network which was trained on 8000 images from the opensource 
 \cite{cnrpark} dataset which consists of 150x150 pixels patches (fig. \ref{fig:patchesimg}) grouped into 2 categories: busy and free.
@@ -134,57 +244,118 @@ Before begining the training, we added some configurations during the compilatio
 As \textbf{optimizer}, we decided for the Adam gradient-based optimizer and for the \textbf{loss function} 
 we used the sparse-categorical cross-entropy loss. The model was able to classify parking slots into occupied and free with 99\% accruacy.
 
-\begin{SCfigure}[0.5][h]
-\caption{Architecture of the used Keras model}
-\includegraphics[width=0.8\textwidth]{Architecture}
-\label{fig:architectureimg}
-\end{SCfigure}
+\begin{figure}[htbp]
+	\centerline{\includegraphics{images/Architecture}}  
+	\caption{Architecture of the custom CNN}
+	\label{fig:architectureimg}
+\end{figure}
 
+\begin{figure}[htbp]
+	\centerline{\includegraphics[width=18cm]{images/vgg16}}  
+	\caption{Architecture of the VGG-16}
+	\label{fig:vggarchitecture}
+\end{figure}
+  
 \par
 A different approach is using an already trained CNN and extending it to meet our classifying needs.
 For this approach, we chose VGG-16 CNN-Architecture with 'imagenet' weights, and extended it by adding a Flatten layer, a Dense(256) layer with ReLU as its activation
-function, followed by a Dropout layer for feature-recognition, and finally a Dense(2) layer to classify into two categories: busy or free.
+function, followed by a Dropout layer for feature-recognition, and finally a Dense(2) layer to classify into two categories: busy or free. (fig. \ref{fig:vggarchitecture})
 Additionally, for this model we used a Stochastic gradient descent (SGD) optimizer and the sparse-categorical crossentropy loss function.
-With this approach, we obtained a 98.9\% accuarcy, with only 4 epochs of training.
+With this approach, we obtained a 86.1\% accuracy, with only 14 epochs of training.
+  
+\begin{figure}[htbp]
+	\centerline{\includegraphics[width=3cm]{images/20150703_0810_10} \includegraphics[width=3cm]{images/20150703_0810_45}}   
+	\caption{Example of 150x150 px patches, free and occupied}
+	\label{fig:patchesimg}
+\end{figure}
 
-\begin{SCfigure}[0.5][h]
-\caption{Example of 150x150 px patches, free and occupied}
-\includegraphics[width=0.2\textwidth]{20150703_0810_10}
-\includegraphics[width=0.2\textwidth]{20150703_0810_45}
-\label{fig:patchesimg}
-\end{SCfigure}
+\chapter{Application}
+\label{chapter:application}
 
-\clearpage
+\section{Useful Tools}
+\label{section:usefultools}
+The following tools were used for implementing above mentioned approaches.
+\begin{itemize}
+  \item Tensorflow
+  \item Keras
+  \item Opencv
+  \item Matplotlib
+\end{itemize}
+
+
+\section{Methodology}
+\label{section:methodology}
+
 For testing the models, we used a set of 20 full images from the \cite{cnrpark} dataset.
 Each image contained 54 parking slots which were initially marked manually and their coordinates stored into a database. By uploading the image of the entire parking area,
 our algorithm is able to iterate through all labeled regions of interest (ROIs) stored in the database, retrieve the patch corresponding to its coordinates from the entire image,
 scale each obtained ROI patch from the original image to the coresponding resolution (150x150px)
 and then apply the Convolutional Neural Network model to predict if it represents an empty or an occupied slot.
 While using the first approach to test the classification on this 20 test images, the average percentage of correctly classified parking spots from an input image was 96\%, as seen in the figure \ref{fig:resultimg}.
+With the second approach we managed to get a 79\% accuracy. 
 
-\begin{SCfigure}[0.5][h]
-\caption{Obtained image after labeling the ROIs}
-\includegraphics[width=0.6\textwidth]{2015-11-12_0947}
-\label{fig:resultimg}
-\end{SCfigure}
+\begin{figure}[htbp]
+	\centerline{\includegraphics[width=10cm]{images/2015-11-12_0947}}   
+	\caption{Obtained image after labeling the ROIs}
+	\label{fig:resultimg}
+\end{figure}
 
-\subsection{Experimental Design}
+\section{Experimental Design}
+\label{section:experimentaldesign}
+
 While our algorithm is capable of classifying parking spots in a single input image, the ultimate goal of our application is to obtain information about the availability of parking spots from a video. 
 For the demo, we used a recorded sequence from a live stream video of a parking lot in Hicksville, New York, USA. The location of each parking spot was manually marked and saved as coordinates into a database. 
-At a fixed interval of n seconds the current frame is extracted from the video and passed to the algorithm which processes each spot and updates the database with the predicted occupancy of each slot.
+At a fixed interval of 8 seconds the current frame is extracted from the video and passed to the algorithm which processes each spot and updates the database with the predicted occupancy of each slot.
 The latest state of the data is then fetched by the client and displayed in form of a grid of red and green boxes, for occupied and free spots, respectively. 
-The position of the boxes in the grid corresponds to those of the spots, so the user can easily identify the location of the empty parking spot.
+The position of the boxes in the grid corresponds to those of the spots, so the user can easily identify the location of the empty parking spot. In addition, by clicking on a cell of the table, the exact spot is highlighted in the video.
 
 In a real life scenario, the Youtube video could be replaced by a live stream from a parking lot surveillance camera so the app could provide real time information about the parking lot occupancy.
 
-\begin{SCfigure}[0.5][h]
-  \caption{App flow diagram}
-  \includegraphics[width=1.0\textwidth]{flow}
-  \label{fig:flowimg}
-\end{SCfigure}
-
 \clearpage
-\bibliographystyle{sbc}
-\bibliography{sbc-template}
+
+\begin{figure}[htbp]
+	\centerline{\includegraphics[width=18cm]{images/flow}}   
+	\caption{App flow diagram}
+	\label{fig:flowimg}
+\end{figure}
+
+\section{Results}
+\label{section:results}
+
+To measure the performance of our algorithms, we used 20 randomly selected frames from the video. Our CNN model with the custom architecture was able to classify parking spots with an overall average accuracy of 87\%. Occupied slots were detected with a precision of 100\% an a recall of 77\%, while free slots achived 75\% precision and 100\% recall (results could be viewed in \textbf{Table} \ref{tab:metrics}) This means that when a spot is classified as occupied, the classification is almost always done right - there were no free spots that the algorithm considered occupied. As a result we could say that if a free spot is present in the parking lot, it will be most probably detected. The classification of occupied slots has a lower precision, being sometimes classified as free. Some slots tend to be wrongly classified more often than others: those that are in the far back of the parking slot, due to the lower resolution of the slot cropped out of the full image, and also those that have a car with a color similar to the color of the ground.
+
+While using the same approach to test the performance of the VGG-16 model, we obtained similar results, although surprisingly, the metrics were lower than for our custom model, achieving 79\% accuracy. The tendency to classify free spots correctly better than occupied ones remained the same, the precision reaching 87\% for busy and 70\% for free spots, respectively. 
+
+Based on a number of factors, we decided to further use our custom model for the app. Firstly, the experimental results showed a slightly better performance in terms of accuracy, precision and recall for the custom model than for the VGG-16 model. Secondly, we wanted to experiment with training the model so it could achive better results, and doing this with the VGG-16 architecture would have required significantly more computational power and execution time. This were the main factors that convinced us to further fine tune the custom model.
+
+To improve the accuracy of the model, we first decided to increase the number of train epochs. We added Keras callbacks to monitor the accuracy, save the model after the completion of each epoch in case the accuracy improved and stop the training in case the accuracy did not improve in the last n epochs. This approach created a model that was trained in 10 epochs and achived a validation accuracy of 99\%.
+As the classification result is dependent not only by the model but also by the input it receives, we decided to add a preproccessing step to the extracted frames. For this, we used the opencv implementation of Contrast Limited Adaptive Histogram Equalization for enhancing the contrast of the image.
+
+Measuring the performance metrics of the algorithm after adding the improvements on the same 20 frames as before showed a significant increase in accuracy, precision and recall, all of them reaching 97-99\% as seen in \textbf{Table} \ref{tab:metrics}
+
+\begin{table}[htb]
+  \begin{centering}
+  \begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  \multicolumn{1}{|c|}{\multirow{2}{*}{Model}} & \multirow{2}{*}{Accuracy} & \multicolumn{2}{c|}{Busy} & \multicolumn{2}{c|}{Free} \\ \cline{3-6} 
+  \multicolumn{1}{|c|}{}                       &                           & Precision     & Recall    & Precision     & Recall    \\ \hline
+  Custom CNN model                             & 0.86                      & 1             & 0.77      & 0.74          & 1         \\ \hline
+  VGG-16 model                                 & 0.79                      & 0.87          & 0.75      & 0.70          & 0.85    \\ \hline
+  Custom CNN model with improvements           & 0.98                      & 0.99          & 0.98      & 0.97          & 0.99      \\ \hline
+  \end{tabular}
+  \caption{Experimental results}
+  \label{tab:metrics}
+  \end{centering}
+\end{table}
+
+\chapter{Conclusion and future work}
+\label{chapter:concl}
+
+Our application tries to solve the problem of automatical detection of free parking spots, using image recognition from a live video stream. In the experimental phase, we tried to apply two algorithms for solving this classification problem. As our app is focused more on speed efficiency, rather than accuracy, we decided to keep the first algorithm, which is a custom CNN architecture implemented using Tensorflow Keras. The significantly smaller training time of the model compared to training the well-known VGG16 has allowed us to research the power of the Tensorflow framework, customizing different parameters and observing related improvements to the performance metrics.
+Of course, the app is just a proof of concept, meaning that the classification accuracy is directly linked to the video quality. Our algorithm would decrease in it's accuracy in another conditions than that on which it was trained, e.g. different camera angle, night light and weather, that affect the image quality. A solution to this problem would be to extend the dataset to include patches from all the described conditions. This would require more computational power to process the larger dataset in the training phase. Even then we would try to keep the computational time of the prediction low, so that the app would be scalable enough and show information that is up to date. The architecture of the model could also be improved by adding some new layers to the model or finetuning the parameters.
+If we would take into consideration all the above mentioned improvements, the app would definetely provide accurate classification regardless of weather, light and other conditions. This means that the provided information would be reliable enough for the app to be used in the real world.
+
+\bibliographystyle{plain}
+\bibliography{BibAll}
 
 \end{document}
