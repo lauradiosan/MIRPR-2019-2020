@@ -7,3 +7,6 @@
 
 * ```$ cd path/to/HappyFlowGUI```
 * ```$ pip install -r requirements.txt```
+
+
+The network weights aren't here since they are too big for github.

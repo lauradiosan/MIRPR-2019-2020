@@ -1,2 +1,5 @@
+numpy
+absl
+tensorflow
 opencv-python
 Pillow
