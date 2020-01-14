@@ -1,0 +1,21 @@
+{
+    "model_id": "ssdnet",
+    "optimizer": "adam",
+    "n_classes": 2,
+    "learning_rate": 0.01,
+    "batch_size": 16,
+    "mapping_threshold": 0.4,
+    "conf_threshold": 0.35,
+    "suppress_threshold": 0.46,
+    "weight_decay": 0.0001,
+    "n_epochs": 45,
+    "first_decay": 10,
+    "second_decay": 20,
+    "third_decay": 35,
+    "decay_rate": 0.1,
+    "freeze_backbone": 1,
+    "train_stats_step": 10,
+    "eval_step": 1,
+    "loss": 9999,
+    "mAP": 0.0005062006776863625
+}
