@@ -1,0 +1,15 @@
+.Create-live-session {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.Prompt-text {
+    color: #005cbf;
+    font-size: 30px;
+}
+
+.Button-custom {
+    margin: 10px;
+}

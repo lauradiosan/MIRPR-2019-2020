@@ -1,0 +1,76 @@
+.Create-session-from-video {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.Label-text {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.file-label {
+    cursor: pointer;
+    width: 25%;
+    float: right;
+}
+
+.file-control {
+    width: 100%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.Video-input {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Input-item {
+    width: 100%;
+}
+
+.input-file {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.simple-container {
+    text-align: center;
+    width: 100%;
+}
+
+.Form-container {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+form {
+    margin: auto;
+    width: 50%;
+}
+
+#videoInput {
+    width: 100%;
+}
+
+.Success-message-text {
+    font-weight: bold;
+    font-size: 15px;
+    color: #005cbf;
+}
+
+.Error-message-text {
+    font-weight: bold;
+    font-size: 15px;
+    color: darkred;
+}

@@ -1,0 +1,17 @@
+.max-size {
+    height:391px;
+}
+.label-text.bigger{
+    font-weight: bold;
+    color: #212529;
+    font-size: 15px;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.smaller {
+    width:60%;
+}

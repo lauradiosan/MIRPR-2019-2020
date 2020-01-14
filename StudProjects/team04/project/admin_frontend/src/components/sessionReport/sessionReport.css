@@ -1,0 +1,24 @@
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center
+}
+.label-text.bigger{
+    font-weight: bold;
+    color: #212529;
+    font-size: 15px;
+}
+.smaller {
+    width: 60%;
+}
+.Prompt-text {
+    color: #005cbf;
+    font-size: 30px;
+}
+Slider.blue {
+    color: #005cbf;
+}
+.Back-button {
+    margin: 10px;
+}
