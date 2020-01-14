@@ -8,6 +8,10 @@ h1 {
     font-size: 35px;
 }
 
+#mainlogo {
+  width: 100%;
+}
+
 #coverContainer {
   height: fit-content;
 }
@@ -27,6 +31,62 @@ h1 {
 	z-index: -1;
 
 }
+
+#counter-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 280px;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 20px;
+}
+
+
+/* #free-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 300px;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 20px;
+}
+
+
+#occupied-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 300px;
+  align-self: flex-end;
+  font-family: 'Sulphur Point', sans-serif;
+  font-size: 20px;
+} */
+
+#free-header {
+  color: rgb(0,156,80);
+}
+
+#free-counter {
+  font-size: 50px;
+}
+
+#occupied-counter{
+  font-size: 50px;
+}
+
+#occupied-header {
+  color: rgb(122,3,1);
+}
+
+.slots-counter {
+  width:100px;
+  height:100px;
+  margin: 10px;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75),  -5px -5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75),  -5px -5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75), -5px -5px 5px 0px rgba(0,0,0,0.75);
+}
+
 
 
 /* Spinner Begin https://dev.to/wangonya/displaying-a-css-spinner-on-ajax-calls-with-fetch-api-4ndo */
@@ -74,7 +134,7 @@ h1 {
 	padding-top: 2em;
 	padding-bottom: 5em;
 	position: absolute;
-  top: 65%;
+  top: 74%;
 	/* background-color: white; */
 	border-radius: 4px;
 	z-index: 1;

@@ -1,5 +1,6 @@
 import numpy as np
 from PIL import Image
+import cv2
 from controller.config import width, height, channels
 
 
@@ -24,8 +25,12 @@ def img_to_array(img, path=True):
     
     return img_arr
 
-def resize_img(img_path):
-    img = Image.open(img_path)
-    size = (700, 400)
-    img = img.resize(size)
-    img.save(img_path)
+
+def increase_contrast(img):
+    lab = cv2.cvtColor(img, cv2.COLOR_BGR2LAB)
+    l, a, b = cv2.split(lab)
+    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8,8))
+    cl = clahe.apply(l)
+    limg = cv2.merge((cl,a,b))
+    final = cv2.cvtColor(limg, cv2.COLOR_LAB2BGR)
+    return final
