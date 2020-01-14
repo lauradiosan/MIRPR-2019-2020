@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-viewer',
@@ -7,13 +6,23 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./viewer.component.css']
 })
 export class ViewerComponent implements OnInit {
-  data: {message: '', image: null}
-  constructor(private route: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.route.params.subscribe(params => {this.data = JSON.parse(params.context);});
-    console.log(this.data);
+  message: string;
+  image;
+  constructor() {
   }
 
+  ngOnInit() {
+    this.readImage(window.history.state.image);
+    this.message = window.history.state.message;
+  }
 
+  readImage(img: Blob) {
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      this.image = reader.result;
+    });
+    if (img) {
+      reader.readAsDataURL(img);
+    }
+  }
 }

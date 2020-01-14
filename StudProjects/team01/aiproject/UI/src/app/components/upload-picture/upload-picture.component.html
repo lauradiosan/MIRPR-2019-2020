@@ -1,4 +1,5 @@
-<form #form="ngForm" (ngSubmit)="submit($event)" id="picForm">
+<mat-progress-spinner mode="indeterminate" *ngIf="this.isLoading" class="center"></mat-progress-spinner>
+<form #form="ngForm" (ngSubmit)="submit($event)" id="picForm" [ngClass]="{'faded' : isLoading}">
   <div class="content">
     <div class="box">
       <input
@@ -24,44 +25,28 @@
         </figure>
         <span>{{
           this.fileName ? this.fileName : "Choose a file&hellip;"
-        }}</span>
+          }}</span>
       </label>
     </div>
   </div>
   <div class="middle-options">
-    <div class="custom-control custom-radio">
+    <div class="custom-control custom-radio" *ngFor="let label of this.labels">
       <input
         type="radio"
         class="custom-control-input"
         name="malformation"
-        id="is-malformation"
-        value="malformation"
-        ngModel
+        id="{{label}}"
+        value="{{label}}"
       />
-      <label class="custom-control-label" for="is-malformation"
-        >Malformation</label
+      <label class="custom-control-label" for="{{label}}"
+      >{{label}}</label
       >
     </div>
-    <div class="custom-control custom-radio">
-      <input
-        type="radio"
-        class="custom-control-input"
-        name="malformation"
-        id="no-malformation"
-        value="no-malformation"
-        ngModel
-      />
-      <label class="custom-control-label" for="no-malformation"
-        >No malformation</label
-      >
-    </div>
-    <div class="middle-options">
-      <input
-        class="btn btn-primary"
-        id="submitBtn"
-        type="submit"
-        value="Submit"
-      />
-    </div>
+    <input
+      class="btn btn-primary"
+      id="submitBtn"
+      type="submit"
+      value="Submit"
+    />
   </div>
 </form>

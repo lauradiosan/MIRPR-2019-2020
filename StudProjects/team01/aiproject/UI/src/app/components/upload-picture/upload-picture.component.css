@@ -97,12 +97,25 @@
   height: 100%;
   fill: #f1e5e6;
 }
+
 .middle-options {
   width: fit-content;
   position: relative;
-  left: 45%;
+  left: 47%;
+  top: -3.5em;
 }
 
-.middle-options #submitBtn {
-  margin: 2em 0 0 -2em;
+#submitBtn {
+  margin-top: 1em;
+}
+
+.center {
+  position: absolute;
+  top: 50vh;
+  left: 45vw;
+  z-index: 1;
+}
+
+.faded {
+  opacity: 0.5;
 }

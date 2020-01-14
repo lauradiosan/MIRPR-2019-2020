@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.14)  3 DEC 2019 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.14)  14 JAN 2020 11:01
 entering extended mode
 **./documentatie.tex
 (documentatie.tex
@@ -78,6 +78,30 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count91
 \enitdp@description=\count92
 )
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/07/20 v1.3b Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
 
 LaTeX Warning: Unused global option(s):
     [a4papaer].
@@ -85,18 +109,18 @@ LaTeX Warning: Unused global option(s):
 (documentatie.aux)
 \openout1 = `documentatie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -132,130 +156,249 @@ LaTeX Font Info:    ... okay on input line 8.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
-[1
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+("C:\Users\radum\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+) [1
 
 {C:/Users/radum/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(documentatie.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
+(Font)              <17.28> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 1.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 1.
-)
-\tf@toc=\write3
-\openout3 = `documentatie.toc'.
-
+(Font)              <8> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 51.
  [1] [2]
-Overfull \hbox (22.75264pt too wide) in paragraph at lines 56--78
-[]\OT1/cmr/m/n/12 Layers: [] 
+<./images/diagrama.png, id=16, 627.84563pt x 316.93407pt>
+File: ./images/diagrama.png Graphic file (type png)
+<use ./images/diagrama.png>
+Package pdftex.def Info: ./images/diagrama.png  used on input line 116.
+(pdftex.def)             Requested size: 470.88306pt x 237.69997pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--117
+
  []
 
-[3] [4]
-Overfull \hbox (4.99275pt too wide) in paragraph at lines 87--101
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 87--117
+
+ []
+
+
+Overfull \hbox (40.87843pt too wide) in paragraph at lines 87--117
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--127
+
+ []
+
+[3 <./images/diagrama.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 128--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--168
+
+ []
+
+<./images/Accuracy-Epoch-Benchmark.png, id=22, 462.528pt x 344.0052pt>
+File: ./images/Accuracy-Epoch-Benchmark.png Graphic file (type png)
+<use ./images/Accuracy-Epoch-Benchmark.png>
+Package pdftex.def Info: ./images/Accuracy-Epoch-Benchmark.png  used on input l
+ine 169.
+(pdftex.def)             Requested size: 231.26343pt x 172.00217pt.
+<./images/Loss-Epochs-Benchmark.png, id=23, 462.528pt x 344.0052pt>
+File: ./images/Loss-Epochs-Benchmark.png Graphic file (type png)
+<use ./images/Loss-Epochs-Benchmark.png>
+Package pdftex.def Info: ./images/Loss-Epochs-Benchmark.png  used on input line
+ 170.
+(pdftex.def)             Requested size: 231.26343pt x 172.00217pt.
+<./images/Accuracy-Epochs.png, id=24, 462.528pt x 344.0052pt>
+File: ./images/Accuracy-Epochs.png Graphic file (type png)
+<use ./images/Accuracy-Epochs.png>
+Package pdftex.def Info: ./images/Accuracy-Epochs.png  used on input line 225.
+(pdftex.def)             Requested size: 231.26343pt x 172.00217pt.
+<./images/Loss-Epochs.png, id=25, 462.528pt x 344.0052pt>
+File: ./images/Loss-Epochs.png Graphic file (type png)
+<use ./images/Loss-Epochs.png>
+Package pdftex.def Info: ./images/Loss-Epochs.png  used on input line 226.
+(pdftex.def)             Requested size: 231.26343pt x 172.00217pt.
+
+Overfull \hbox (52.75813pt too wide) in paragraph at lines 169--227
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--227
+
+ []
+
+
+Overfull \hbox (35.13332pt too wide) in paragraph at lines 169--227
+[] [] 
+ []
+
+[4 <./images/Accuracy-Epoch-Benchmark.png> <./images/Loss-Epochs-Benchmark.png>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 229--257
+
+ []
+
+[5 <./images/Accuracy-Epochs.png> <./images/Loss-Epochs.png>] [6]
+Overfull \hbox (4.99275pt too wide) in paragraph at lines 268--282
 \OT1/cmr/m/n/17.28 matic Seg-men-ta-tion for 3D Car-diac CT Vol-umes Us-ing Mar
 ginal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--101
+Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--101
+Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--101
+Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--101
+Underfull \hbox (badness 10000) in paragraph at lines 268--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--125
+Underfull \hbox (badness 10000) in paragraph at lines 286--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--125
+Underfull \hbox (badness 10000) in paragraph at lines 286--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--125
+Underfull \hbox (badness 10000) in paragraph at lines 286--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--125
+Underfull \hbox (badness 10000) in paragraph at lines 286--306
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--143
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 158--168
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--168
+Underfull \hbox (badness 10000) in paragraph at lines 310--324
 
  []
 
-[7] (documentatie.aux) ) 
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 339--349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--349
+
+ []
+
+[9] (documentatie.aux) ) 
 Here is how much of TeX's memory you used:
- 1202 strings out of 492452
- 18380 string characters out of 3120063
- 92506 words of memory out of 3000000
- 5598 multiletter control sequences out of 15000+200000
- 11879 words of font info for 41 fonts, out of 3000000 for 9000
+ 2103 strings out of 492452
+ 33195 string characters out of 3120063
+ 110722 words of memory out of 3000000
+ 6444 multiletter control sequences out of 15000+200000
+ 9735 words of font info for 34 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 25i,6n,23p,708b,245s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,6n,30p,708b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/radum/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/radum/AppData/Local/Programs/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/radum/AppData/Local
@@ -265,9 +408,9 @@ sers/radum/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 12.pfb><C:/Users/radum/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmr17.pfb><C:/Users/radum/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmr6.pfb>
-Output written on documentatie.pdf (8 pages, 101255 bytes).
+Output written on documentatie.pdf (10 pages, 195809 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
+ 74 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

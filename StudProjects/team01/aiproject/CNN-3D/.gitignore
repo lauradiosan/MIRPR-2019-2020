@@ -1,5 +1,6 @@
-/.idea
+.idea
 __pycache__
 mini_data_set
-simple_data
-/*.pickle
+simple_data/
+.pickle
+files/
