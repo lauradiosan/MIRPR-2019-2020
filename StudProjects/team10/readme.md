@@ -1,1 +1,2 @@
-TBA
+MIRPR 2019-2020
+Scopul proiectului este realizarea de sistem inteligent de recomandare si planificare a vacantelor. Acesta va aprsa un text in limbaj natural,  extrage caracteristicile esentiale din el, selecteaza locatie, hotel iar apoi planifica vacanta de la starting point pana la destinatie. Ca bonus, un utlizator poate intoduce o imagine si programul va sugera o locatie si un hotel, respectiv, cel mai apropiat ca peisaj de imagine.
