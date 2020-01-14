@@ -4,17 +4,16 @@ import shutil
 '''l = [Location("loc1", 46.779792, 23.620796),
      Location("loc2", 46.766435, 23.589105),
      Location("loc3", 46.775976, 23.603794)]'''
-l = [Location.get_locations_by_query("iulius mall")[0],
+l = [Location.get_locations_by_query("fsega")[0],
      Location.get_locations_by_query("piata unirii cluj")[0],
-     Location.get_locations_by_query("the office")[0]]
+     Location.get_locations_by_query("the office")[1]]
 #start = Location("start", 46.774775, 23.621636)
 start = Location.get_locations_by_query("economica 2")[0]
-end = Location.get_locations_by_query("iulius mall")[0]
 ti = TravelItinerary("2019-11-09T08:00:00", "2019-11-09T22:00:00", start, start)
 
 ti.add_visit(l[0], "02:00:00", 1)
 ti.add_visit(l[1], "01:00:00", 2)
-ti.add_visit(l[2], "02:00:00", 3)
+ti.add_visit(l[2], "01:00:00", 3)
 
 #visits, tranz = ti.compute_route()
 visits, tranz, map = ti.compute_route_and_get_map()
@@ -42,7 +41,7 @@ print(start.longitude)
 with open('img.png', 'wb') as out_file:
     shutil.copyfileobj(map, out_file)
 
-'''import wikipedia
+import wikipedia
 
 # query = query.replace("Wikipedia", " ")
 q = "Turda"
@@ -72,6 +71,6 @@ PAGES = DATA['query']['pages']
 
 for k, v in PAGES.items():
     print("Latitute: " + str(v['coordinates'][0]['lat']))
-    print("Longitude: " + str(v['coordinates'][0]['lon']))'''
+    print("Longitude: " + str(v['coordinates'][0]['lon']))
 
 

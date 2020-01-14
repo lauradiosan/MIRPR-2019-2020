@@ -1,3 +1,4 @@
+import datetime
 import pathlib
 import re
 from os import listdir
@@ -51,6 +52,9 @@ class ServiceRoute:
         g = geocoder.ip('me')
         print(str(g.latlng[0])+"--"+ str(g.latlng[1]))
         return Location('start', g.latlng[0], g.latlng[1])
+
+    def getHardLocation(self):
+        return Location("home",48.220293,16.3856423)
 
     def __build_schedule(self, schedule):
         days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -177,6 +181,17 @@ class ServiceRoute:
 
     def getObjectivesByLocationAndFilter(self,location, filters):
         objectives = []
+
+        startTime = (datetime.datetime.now() + datetime.timedelta(hours=8)).replace(microsecond=0).isoformat()
+        endTime = (datetime.datetime.now() + datetime.timedelta(hours=18)).replace(microsecond=0).isoformat()
+
+        print(startTime)
+        print(endTime)
+        self.configureRouteDetails(startTime, endTime, self.getHardLocation(),
+                                               self.getHardLocation())
+
+
+
         for filter in filters:
             objectives.extend(self.__parseFilterFile(filter))
         return objectives
@@ -196,9 +211,11 @@ class ServiceRoute:
         :return:
         '''
         for objectivesVisit in objectivesVisits:
+            print(str(objectivesVisit.location)+"--"+str(objectivesVisit.staying_time)+"--"+
+                                             str(objectivesVisit.priority))
             self.__travelItinerary.add_visit(objectivesVisit.location,
                                              objectivesVisit.staying_time,
                                              objectivesVisit.priority)
-        visits, tranz, self.__map = self.__travelItinerary.compute_route_and_get_map()
-
-        return visits, tranz
+        visits, tranz, mapy = self.__travelItinerary.compute_route_and_get_map()
+        self.__map=mapy
+        return visits, tranz,mapy

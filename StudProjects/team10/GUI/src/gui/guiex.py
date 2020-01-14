@@ -1,7 +1,12 @@
+import cv2
+import pathlib
+import shutil
+
 import PySimpleGUI as sg
 import os
 
 import numpy as np
+import pandas
 import folium
 import math
 
@@ -9,6 +14,7 @@ from API.ItineraryAPI.Location import Location
 from Service.ObjectiveVisit import ObjectiveVisit
 from Service.ServiceMain import ServiceMain
 import operator
+from PIL import Image
 
 service=ServiceMain()
 
@@ -68,7 +74,8 @@ def getSize(col):
 
 def getObjectivesByImportance(location, param):
     MAX_ROWS, MAX_COLS, COL_HEADINGS = len(param), 5, ('Nume', 'Review', 'Duration', 'Description', 'Link')
-
+    print('max_rows'+str(MAX_ROWS))
+    print('max_cols'+str(MAX_COLS))
     # A HIGHLY unusual layout definition
     # Normally a layout is specified 1 ROW at a time. Here multiple rows are being contatenated together to produce the layout
     # Note the " + \ " at the ends of the lines rather than the usual " , "
@@ -97,13 +104,21 @@ def getObjectivesByImportance(location, param):
 
             for i in range(MAX_ROWS):
                 for v in param:
-                    print(values[i,0])
-                    print(values[i])
                     if v.location.name==values[i,0] and values[i]==True:
-                        v.priority="1"
-                    else:
-                        v.priority="0"
+                        print("GOT ONE GOOD")
+                        print(values[i,0])
+                        print(values[i])
+                        v.priority="2"
+                if values[i]==False:
+                    for v in param:
+                        if v.location.name == values[i, 0]:
+                            print("GOT ONE GOOD")
+                            v.priority = "1"
+                            param.remove(v)
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
 
+            print(len(param))
             return param
 
         elem = window.find_element_with_focus()
@@ -154,9 +169,9 @@ def searchRouteByLocationAlgorithm(location, filters):
 
     importanceList=getObjectivesByImportance(location,param)
 
-    itinerary,image=service.getRouteByLocationsAndImportance(importanceList)
-
-    searchByLocationRouteResult(itinerary,image)
+    itinerary,tranz,image=service.getRouteByLocationsAndImportance(importanceList)
+    # image=service.getRouteVisualization()
+    searchByLocationRouteResult(itinerary,tranz,image)
 
 
 def showMeTheMap(param):
@@ -207,14 +222,30 @@ def showMeTheMap(param):
     pass
 
 
-def searchByLocationRouteResult(itinerary,image):
+def searchByLocationRouteResult(itinerary,tranz,image):
     # lista=[el.toString() for el in param]
     print(itinerary)
+    print(tranz)
     print(image)
-    lista=[]
+
+
+    ROOT_DIR = str(pathlib.Path(__file__).parent.parent.parent.parent.absolute()) + "\\GUI\\data\\route.jpeg"
+
+    with open(ROOT_DIR, 'wb') as out_file:
+        shutil.copyfileobj(image, out_file)
+    lista=[it for it in itinerary]
+    listaT=[tr for tr in tranz]
+
+
+    # image_elem = sg.Image(ROOT_DIR, size=(80, 80))
+    # image_elem=sg.Image(filename='', key='image')(data=cv2.imencode('.png', ROOT_DIR)[1].tobytes())
+
+
     layout = [
         [sg.Text('We found an amazing route for you..')],
         [sg.Listbox(values=lista, size=(130, 20))],
+        [sg.Listbox(values=listaT, size=(130, 20))],
+        # [image_elem],
         [sg.Button("Show me on map"), sg.Button('Cancel')]
     ]
 
@@ -233,26 +264,86 @@ def searchByLocationRouteResult(itinerary,image):
 
 # Very basic window.  Return values as a list
 def searchByTextResultWindow(locations):
+    locations=[loc[::-1] for loc in locations]
     print(locations)
-    layout = [
-        [sg.Text('We found some great places for you..')],
-        [sg.Listbox(values=locations, size=(80, 10))],
-        [sg.Button("Find visiting route"), sg.Button('Cancel')]
-    ]
+    print(len(locations))
+    print(len(locations[0]))
 
-    windowTextResults = sg.Window('HOLIday').Layout(layout)
-    while True:
-        event, values = windowTextResults.Read()
-        if event in (None, 'Cancel'):
-            windowTextResults.close()
-            main()
-            print("Goodbye")
+    MAX_ROWS, MAX_COLS, COL_HEADINGS = len(locations), len(locations[0]), ('Name', 'Probability', 'Descr')
+
+    # A HIGHLY unusual layout definition
+    # Normally a layout is specified 1 ROW at a time. Here multiple rows are being contatenated together to produce the layout
+    # Note the " + \ " at the ends of the lines rather than the usual " , "
+    # This is done because each line is a list of lists
+    layout = [[sg.Text('Those are you top choices', font='Default 16')]] + \
+             [[sg.Text(' ' * 15)] + [sg.Text(s, key=s, enable_events=True, font='Courier 14', size=(8, 1)) for i, s in
+                                     enumerate(COL_HEADINGS)]] + \
+             [[sg.Checkbox(r, size=(2, 2))] + [
+                 sg.Input(locations[r][c], justification='r', key=(r, c), size=(getSize(c), 1)) for c in
+                 range(MAX_COLS)] for r in range(MAX_ROWS)] + \
+             [[sg.Button('Show Route'), sg.Button('Exit')]]
+
+    # Create the window
+    window = sg.Window('A Table Simulation', layout, default_element_size=(10, 2), element_padding=(2, 1),
+                       return_keyboard_events=True)
+
+    current_cell = (0, 0)
+    while True:  # Event Loop
+        event, values = window.read()
+
+        if event in (None, 'Exit'):  # If user closed the window
             break
-        elif event in ("Find visiting route"):
-            windowTextResults.close()
+        # if clicked button to dump the table's values
+        if event in ('Show Route'):
+            print(values)
 
-            filter=service.getFilters()
-            searchRouteByLocationWindow(values[0],filter)
+            for i in range(MAX_ROWS):
+                for v in locations:
+                    print(values[i, 0])
+                    print(values[i])
+                    if v.location.name == values[i, 0] and values[i] == True:
+                        window.close()
+                        sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                               auto_close=True, non_blocking=True)
+
+                        return v.location
+                    else:
+                        v.priority = "0"
+
+
+
+        elem = window.find_element_with_focus()
+        current_cell = elem.Key if elem and type(elem.Key) is tuple else (0, 0)
+        r, c = current_cell
+
+        if event.startswith('Down'):
+            r = r + 1 * (r < MAX_ROWS - 1)
+        elif event.startswith('Left'):
+            c = c - 1 * (c > 0)
+        elif event.startswith('Right'):
+            c = c + 1 * (c < MAX_COLS - 1)
+        elif event.startswith('Up'):
+            r = r - 1 * (r > 0)
+        elif event in COL_HEADINGS:  # Perform a sort if a column heading was clicked
+            col_clicked = COL_HEADINGS.index(event)
+            try:
+                table = [[str(values[(row, col)]) for col in range(MAX_COLS)] for row in range(MAX_ROWS)]
+
+                new_table = sorted(table, key=operator.itemgetter(col_clicked))
+            except:
+                sg.popup_error('Error in table', 'Your table must contain only ints if you wish to sort by column')
+            else:
+                for i in range(MAX_ROWS):
+                    for j in range(MAX_COLS):
+                        window[(i, j)].update(new_table[i][j])
+                [window[c].update(font='Any 14') for c in COL_HEADINGS]  # make all column headings be normal fonts
+                window[event].update(font='Any 14 bold')  # bold the font that was clicked
+        # if the current cell changed, set focus on new cell
+        if current_cell != (r, c):
+            current_cell = r, c
+            window[current_cell].set_focus()  # set the focus on the element moved to
+            window[current_cell].update(
+                select=True)  # when setting focus, also highlight the data in the element so typing overwrites
 
 
 def searchRouteByLocationWindow(location,filter):
@@ -277,6 +368,8 @@ def searchRouteByLocationWindow(location,filter):
             windowOperation.close()
 
             print(valuesOperation)
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
             searchRouteByLocationAlgorithm(valuesOperation[0], valuesOperation[1])
 
 
@@ -318,6 +411,9 @@ def openWindowImageTextSearch():
         elif eventOperation in ('Search for me'):
             windowOperation.close()
             print(valuesOperation[1])
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
+
             searchByImageTextAlgorithm(valuesOperation[0], valuesOperation[1])
 
         if valuesOperation[1] != "path":
@@ -342,6 +438,9 @@ def openWindowTextSearch():
             break
         else:
             windowOperation.close()
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
+
             searchByTextAlgorithm(valuesOperation[0])
 
 
@@ -353,8 +452,8 @@ def openWindowImageSearch():
     layoutOperation = [
         [sg.Text('An image says what a thousand words can\'t..')],
         [sg.Text('The image :'), sg.InputText('path'), sg.FileBrowse()],
-        [image_elem],
-        [sg.Button('Search for me'), sg.Button('Cancel')]
+        [sg.Button('Search for me'), sg.Button('Cancel')],
+        [image_elem]
     ]
     windowOperation = sg.Window('Text it out').Layout(layoutOperation)
 
@@ -367,10 +466,20 @@ def openWindowImageSearch():
         elif eventOperation in ('Search for me'):
             windowOperation.close()
             print(valuesOperation[0])
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
+
             searchByImageAlgorithm(valuesOperation[0])
 
         if valuesOperation[0] != "path":
-            image_elem.update(valuesOperation[0])
+            try:
+                image_elem.update(valuesOperation[0])
+            except:
+
+                im = Image.open(valuesOperation[0])
+                im.save(valuesOperation[0].split('.jpg')[0]+'.png')
+                image_elem.update(valuesOperation[0].split('.jpg')[0]+'.png')
+
 
 
 def openWindowRoutesSearch():
@@ -392,6 +501,9 @@ def openWindowRoutesSearch():
             windowOperation.close()
             filter=service.getFilters()
             print(filter)
+            sg.popup_quick_message('Hang on for a moment, this will take a bit to calculate....',
+                                   auto_close=True, non_blocking=True)
+
             searchRouteByLocationWindow(valuesOperation[0],filter)
 
 

@@ -4,9 +4,8 @@
 # This service is responsible for the main calls fromm the gui
 # it will contain the other services that will contain the bussiness
 # methhods and will ddeal with the combining of methods
-#from Service.ServiceText import ServiceText
-#from Service.ServiceImage import ServiceImage
-from API.ItineraryAPI.Location import Location
+from Service.ServiceText import ServiceText
+from Service.ServiceImage import ServiceImage
 from Service.ServiceRoute import ServiceRoute
 import datetime
 
@@ -14,17 +13,19 @@ class ServiceMain:
 
 
     # receives as parameteres the other services
-    def __init__(self,servRoute: ServiceRoute):
+    def __init__(self,servText: ServiceText, servImage: ServiceImage, servRoute: ServiceRoute):
+        self.__servText=servText
+        self.__servImage=servImage
         self.__servRoute=servRoute
 
     def __init__(self):
-        #self.__servText=ServiceText()
-        #self.__servImage=ServiceImage()
+        self.__servText=ServiceText()
+        self.__servImage=ServiceImage()
         self.__servRoute=ServiceRoute()
 
     # userText is the text received from the user as a string
     def getTextLocation(self,userText):
-        #listLocationByText=self.__servText.TextToTextAlgorithm(userText)
+        listLocationByText=self.__servText.TextToTextAlgorithm(userText)
         listLocationByLabel= []
         # labelList=self.__servText.extractLabelsAlgorithm(userText)
         # print("label list: " , labelList)
@@ -83,20 +84,12 @@ class ServiceMain:
 
 
         # startTime=datetime.datetime.now().isoformat()
-        startTime=(datetime.datetime.now()+datetime.timedelta(hours=10)).replace(microsecond=0).isoformat()
-        endTime=(datetime.datetime.now()+datetime.timedelta(hours=22)).replace(microsecond=0).isoformat()
-
-        print(startTime)
-        print(endTime)
-        self.__servRoute.configureRouteDetails(startTime,endTime,Location("start", 48.213997, 16.362217),Location("stop", 48.213997, 16.362217))
-
         print(importanceLocationDictionary)
-        itinerary,image=self.__servRoute.getObjectivesVisitsRoute(importanceLocationDictionary)
-        return itinerary,image
+        itinerary,tranz,image=self.__servRoute.getObjectivesVisitsRoute(importanceLocationDictionary)
+        return itinerary,tranz,image
 
-
-
-
+    def getRouteVisualization(self):
+        self.__servRoute.getRouteVisualization()
 
 # service = ServiceMain()
 # service.getTextLocation("I wish to go with my family in a warm place where my children can go to the pool and where my husband can play poker. Also I want this place to be in the United States. Somewhere in California should do the trick. We would like to spend 10 thousand dollars and we want to go this summer.")

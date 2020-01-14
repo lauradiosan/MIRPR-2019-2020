@@ -5,7 +5,7 @@ import dateutil.parser
 import calendar
 import requests
 
-import settings
+
 
 
 class Location:

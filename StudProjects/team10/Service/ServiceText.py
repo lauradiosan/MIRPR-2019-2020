@@ -1,5 +1,3 @@
-import pathlib
-
 import nltk
 
 from NLPAylienAndWatson.TextRecognition import getFeatFromText, getLocationDateAndMoney
@@ -7,10 +5,12 @@ from NLPAylienAndWatson.TextObj import TextObj
 from NLPAylienAndWatson.main import textToLabel
 from Scrapping.textData import *
 import pickle
-#import Levenshtein
+import Levenshtein
 from nltk.corpus import wordnet
 
 from TextSimilarity.text_sim_api import *
+import nltk
+nltk.download('wordnet')
 
 
 class ServiceText:
@@ -28,6 +28,19 @@ class ServiceText:
         # do the " \ "trick. We would like to spend 10 thousand dollars and we want to go this summer. "
 
         list_searchEntities = getFeatFromText(userText)
+        # thisset = {'apple'}
+        #
+        # q = ""
+        # texts = text.split(".")
+        # print(texts)
+        # for txt in texts:
+        #     if txt:
+        #         list_searchEntities = getFeatFromText(txt)
+        #         print("Keywords:")
+        #         print(list_searchEntities)
+        #         for el in list_searchEntities:
+        #             thisset.add(el)
+
         result = getLocationDateAndMoney(userText)
 
         location = result[0]
@@ -37,33 +50,34 @@ class ServiceText:
         print("\n\n\nFinal Keywords:")
         # print(thisset)
 
-        # print("Keywords:")
-        # print(list_searchEntities)
-        # print()
+        print("Keywords:")
+        print(list_searchEntities)
+        print()
+
+        q = ""
 
         locationStr = "-"
         dateStr = "-"
         moneyStr = "-"
         if location:
-            # print("Location: ")
-            # print(location[0])
+            print("Location: ")
+            print(location[0])
             locationStr = location[0]
         if date:
-            # print("Date: ")
-            # print(date[0])
+            print("Date: ")
+            print(date[0])
             dateStr = date[0]
         if money:
-            # print("Budget: ")
-            # print(money[0])
+            print("Budget: ")
+            print(money[0])
             moneyStr = money[0]
 
         objReturned = TextObj(list_searchEntities, locationStr, dateStr, moneyStr)
-        # print(objReturned)
-
-        labels_list = []
+        print(objReturned)
         for label in objReturned.getListOfObjectsWithProb():
-            labels_list.append([label.getEntity(), label.getProb()])
-        return labels_list
+            print(label)
+        return objReturned.getListOfObjectsWithProb()
+
 
     def pushToFile(self, extension, list_objects, list_cities):
         for city in list_cities:
@@ -147,10 +161,10 @@ class ServiceText:
 
             for keyword in keywords:
                 for label_prop in labelList:
-                    label= label_prop[0]
+                    label= label_prop.getEntity()
                     if keyword =="Art Museum":
                         print("stop")
-                    probability= label_prop[1]
+                    probability= label_prop.getProb()
                     keyword = keyword.lower()
                     label = label.lower()
 
@@ -163,8 +177,7 @@ class ServiceText:
                             labels.append(keyword)
 
                     for word in keyword.split(" "):
-                        #if Levenshtein.distance(word, label) < max(len(word), len(label))//2 and word not in labels:
-                        if True:
+                        if Levenshtein.distance(word, label) < max(len(word), len(label))//2 and word not in labels:
                             if probability >= 0.7:
                                 similarity += 2
                             elif probability >= 0.45:
