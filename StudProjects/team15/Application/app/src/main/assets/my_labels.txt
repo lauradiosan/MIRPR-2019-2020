@@ -1,0 +1,5 @@
+???
+crosswalk
+crosswalk_sign
+pedestrian
+semaphore
