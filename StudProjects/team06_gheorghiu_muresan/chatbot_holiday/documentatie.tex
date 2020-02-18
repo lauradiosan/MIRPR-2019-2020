@@ -1,0 +1,271 @@
+\documentclass[runningheads,a4paper,11pt]{report}
+
+%\usepackage{algorithmic}
+\usepackage{algorithm} 
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{comment} 
+\usepackage{epsfig} 
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{geometry} 
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref} 
+\usepackage[latin1]{inputenc}
+\usepackage{multicol}
+\usepackage{multirow} 
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{subfigure}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+\geometry{a4paper,top=3cm,left=2cm,right=2cm,bottom=3cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Project's name}
+\fancyhead[RE,LO]{Team's name}
+\fancyfoot[RE,LO]{MIRPR 2019-2020}
+\fancyfoot[LE,RO]{\thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{lime}\leaders\hrule height \footrulewidth\hfill}}
+
+\hypersetup{
+pdftitle={artTitle},
+pdfauthor={name},
+pdfkeywords={pdf, latex, tex, ps2pdf, dvipdfm, pdflatex},
+bookmarksnumbered,
+pdfstartview={FitH},
+urlcolor=cyan,
+colorlinks=true,
+linkcolor=red,
+citecolor=green,
+}
+% \pagestyle{plain}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\linespread{1}
+
+% \pagestyle{myheadings}
+
+\makeindex
+
+
+\begin{document}
+
+\begin{titlepage}
+\sloppy
+\begin{center}
+BABE\c S BOLYAI UNIVERSITY, CLUJ NAPOCA, ROM\^ ANIA
+
+FACULTY OF MATHEMATICS AND COMPUTER SCIENCE
+
+\vspace{6cm}
+
+\Huge \textbf{Holiday chatbot}
+
+\vspace{1cm}
+
+\normalsize -- MIRPR report --
+
+\end{center}
+
+
+\vspace{5cm}
+
+\begin{flushright}
+\Large{\textbf{Team members}}\\
+Gheorghiu Drago\c s, Informatic\u a Rom\^ an\u a, 233\\
+Mure\c san Bogdan, Informatic\u a Rom\^ an\u a, 233\\
+\end{flushright}
+
+\vspace{4cm}
+
+\begin{center}
+2019
+\end{center}
+
+\end{titlepage}
+
+\pagenumbering{gobble}
+
+
+\tableofcontents
+
+\newpage
+
+\listoftables
+\listoffigures
+\listofalgorithms
+
+\newpage
+
+\setstretch{1.5}
+
+
+
+\newpage
+
+\pagenumbering{arabic}
+
+
+ 
+
+
+\chapter{Introduction}
+\label{chapter:introduction}
+
+\section{What? Why? How?}
+\label{section:what}
+
+Motivate and abstractly describe the problem you are addressing and how you are addressing it. 
+\begin{itemize}
+	\item What is the (scientific) problem? 
+	\newline
+	The problem approaches natural language processing and natural language understanding. The user will use natural language to describe the basic requirements for a holiday: location, number of rooms, number of people, start date, number of days or other preferences.
+	\item Why is it important? 
+	\newline
+	The app is a holiday chatbot assistant that will provide to users a general idea of their vacation needs and it will help making a fist impression of the avaiable accommodation options.
+
+	\item What is your basic approach? 
+	\newline
+	Our app is a prototype demonstrating the basic functionalities of the app. This includes recognizing a few filters from the user input, and using the Booking API to give hotel recommendations.
+
+\end{itemize}
+
+
+
+\chapter{Scientific Problem}
+\label{section:scientificProblem}
+
+\section{Open text analysis}
+\label{section:openTextAnalysis}
+The main part of the application's flow is extracting the user's requirements from open text. Giving a friendlier experience is the motivation behind building it as a chatbot, so that's why we decided to allow this type of input. We're using the nltk and spacy libraries and the model that comes with these in order to extract all the information we need:
+\begin{itemize}
+	\item location
+	\item time period
+	\item number of rooms
+	\item number of people
+\end{itemize}  
+\subsection{Extract location}
+
+%cod si o mica descriere daca vrei
+Using spacy and NLTK we analyze the user input and we the check the tag of the information that was returned to us. If the tag represents a location then we can say that we found the location that the user wants to visit.
+
+\subsection{Extract the start date}
+Using the tools described above we can also look for information with the DATE tag. This tag will let us know that the information it accompanies refers to a time. It can be a classic date format such as "17/06/2020" or even a described date, such as "the 17th of June 2020". We try to parse this date using the date parser from the dateutils library.
+
+\subsection{Extract time period}
+Just like the start date, the time period will also be accompanied by the DATE tag. This is a bit of an edge case for us because we expect the user to provide the length of the holiday by specifying the number of days, such as saying "5 days". No matter what the input is we try to parse it like it is in a format described above and if that cannot be done it means that the information being parsed actually refers to the length of the holiday. We then process it by removing any words and leaving only the cardinal and we move on.
+%cod si o mica descriere daca vrei
+
+\subsection{Extract the number of persons}
+When it comes to the number of persons we search for a CARDINAL tag and we collect it. In the future we will definitely improve this extraction by making sure that the cardinal actually refers to the number of persons and not some extra information provided by the user.
+
+\subsection{Extract number of rooms}
+Because the number of rooms is also a CARDINAL we decided to leave this information at the end and treat it as a special case. After every other type of information was provided, the bot will ask the user to also provide the number of rooms. The extraction is similar to the one described above.
+
+		
+\chapter{State of art/Relate work}
+\label{chapter:stateOfArt}
+\section*{Google Assistant}
+\begin{itemize}
+	\item Virtual Assistant (not for travel planning)
+	\item Stand alone app
+\end{itemize} 
+
+\section*{Mezi}
+\begin{itemize}
+	\item Stand alone app
+	\item Includes flights, hotels and restaurant reservations	
+	\item Provides interactive output (buttons to book a flight)
+\end{itemize}
+
+\section*{HelloGBye}
+\begin{itemize}
+\item Virtual Travel Planning Assistant
+\item Text and voice recognition	
+\item Provides interactive output (buttons to book a flight)
+\end{itemize}
+
+\section*{Hello Hipmunk}
+\begin{itemize}
+	\item Virtual Travel planning assistant
+	\item Integrated with Facebook Messenger, Slack, Skype
+	\item Available to group chats
+	\item Includes flights and hotels
+	\item Deals only with traveling (doesn't help with dinner or entertainment)
+\end{itemize}
+
+
+\section*{SnapTravel}
+\begin{itemize}
+\item Virtual Travel Planning Assistant
+\item Integrated with Facebook Messenger and Whatsapp
+\end{itemize}
+
+
+\section*{Holiday Helper}
+\begin{itemize}
+	\item Stand alone app
+	\item Includes only hotels, using the Booking API
+	\item The information is asked for in multiple rounds, not all at once, unless the user provides more (e.g. both the location, number of people and number of rooms) at a time.
+	\item Text recognition only
+\end{itemize}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		& Mezi& HelloGBye & Hello Hipmunk & SnapTravel & Holiday Helper \\ \hline
+		Stand alone app & NO & YES & YES & YES & YES \\ \hline
+		Messenger & YES & NO & {\color[HTML]{333333} YES} &  NO & NO \\ \hline
+		Whatsapp & NO & NO & YES & NO & NO \\ \hline
+		Slack & YES & NO & NO & NO & NO \\ \hline
+		Skype & YES & NO & NO & NO & NO \\ \hline
+		Hotels & YES & YES & YES & YES & YES \\ \hline
+		Restaurants & NO & YES & NO & NO & NO \\ \hline
+		Flights & YES & YES & YES & YES & NO \\ \hline
+	\end{tabular}
+\end{table}
+
+
+
+\chapter{Proposed approach}
+\label{chapter:proposedApproach}
+For the sake of the proof of concept we only created a client and all the processing is done client-side, but the app is intended for a client-server approach. 
+\newline 
+The concept is simple: the user talks about their holiday plans and the bot extracts information. The bot is capable of extracting multiple information from the same input, and if after one input there is still information that is required in order to provide a holiday solution, the bot will ask for targeted information until he receives everything that is required. 
+\newline
+After every piece of information was acquired, we make an API call that sends the name of a location and provides a code to that location, that we further need. After this, we make another API call with all the information that was gathered and we receive multiple results from multiple websites. Then we look for a result that is actually bookable in the given time frame and we provide the user with it.
+\newline
+In the future there are more feature that we wish to implement:
+\begin{itemize}
+    \item allow the user to view multiple offers for the same location
+    \item allow the user to specify more filters (e.g. beach view, pool, close to the town, etc.)
+    \item allow the user to specify more vague locations, rather then specific ones (e.g. the Alps)
+    \item allow the user to specify a price range they want the offer to be
+    \item train our own custom data in order to achieve better recognition of information
+    \item implement an image recognition system so the user can upload an image and receive offers from the location in the image
+\end{itemize}
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{BibAll}
+
+\end{document}
