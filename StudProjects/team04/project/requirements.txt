@@ -1,4 +1,4 @@
-flask-cors==3.0.8
+flask-cors==3.0.9
 tensorflow==2.0.0
 amqp==2.5.1
 billiard==3.6.1.0
