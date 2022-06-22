@@ -20,7 +20,7 @@ MarkupSafe==1.1.1
 monkey==0.1
 more-itertools==7.2.0
 mss==4.0.3
-numpy==1.17.3
+numpy==1.22.0
 opencv-python==4.1.1.26
 pycparser==2.19
 python-engineio==3.10.0
